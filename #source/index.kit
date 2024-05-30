@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>БУВВ-1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<link rel="stylesheet" href="css/pre-style.css">
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="img/site_logo.ico">
+	</head>
+	
+	<body>
+		<!--Оболочка всей страницы-->
+		<!--Используется как флекс-контейнер, чтобы разнести футер и контент-->
+		<div class="wrapper">
+			<main class="page">
+				<!--Подключаем хедер обязательно в коментарии-->
+				<!-- @import "header.html" -->
+				<section class="mainblock">
+					<div class="_container">
+						<section class="mainblock__body">
+							<!--Пробую вставить график температуры и влажности через библиотеку
+							<h2>ESP Weather Station</h2>
+  							<div id="chart-temperature" class="container"></div>
+  							<div id="chart-humidity" class="container"></div> -->
+							<!--Пробую вставить график
+							<figure class="highcharts-figure">
+								<div id="container"></div>
+							</figure>-->
+						</section>
+					</div>
+				</section>
+				<!--Верстаем футер-->
+				<footer class="footer">
+					<div class="_container">
+						<div class="footer__row">
+							<div class="footer__copy">Business 2017</div>
+							<div class="footer__sections">
+								<a href="" class="footer__link">Terms & Conditions</a>
+								<a href="" class="footer__link">Privacy Policy</a>  	
+							</div>
+						</div>
+					</div>
+				</footer>
+			</main>
+		</div>
+		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
+		<script src="js/highcharts.js"></script>
+		<script src="js/series-label.js"></script>
+		<script src="js/exporting.js"></script>
+		<script src="js/export-data.js"></script>
+		<script src="js/accessibility.js"></script>
+		<script src="js/script.js"></script>
+		<!--Пробую вставить график по температуре и давлению-->
+		<script>
+		var chartT = new Highcharts.Chart({
+			chart:{ renderTo : 'chart-temperature' },
+			title: { text: 'DHT11 Temperature' },
+			series: [{
+			  showInLegend: false,
+			  data: []
+			}],
+			plotOptions: {
+			  line: { animation: false,
+				dataLabels: { enabled: true }
+			  },
+			  series: { color: '#059e8a' }
+			},
+			xAxis: { type: 'datetime',
+			  dateTimeLabelFormats: { second: '%H:%M:%S' }
+			},
+			yAxis: {
+			  title: { text: 'Temperature (Celsius)' }
+			  //title: { text: 'Temperature (Fahrenheit)' }
+			},
+			credits: { enabled: false }
+		  });
+		  setInterval(function ( ) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			  if (this.readyState == 4 && this.status == 200) {
+				var x = (new Date()).getTime(),
+					y = parseFloat(this.responseText);
+				//console.log(this.responseText);
+				if(chartT.series[0].data.length > 40) {
+				  chartT.series[0].addPoint([x, y], true, true, true);
+				} else {
+				  chartT.series[0].addPoint([x, y], true, false, true);
+				}
+			  }
+			};
+			xhttp.open("GET", "/temperature", true);
+			xhttp.send();
+		  }, 5000 ) ;
+		  
+		  var chartH = new Highcharts.Chart({
+			chart:{ renderTo:'chart-humidity' },
+			title: { text: 'DHT11 Humidity' },
+			series: [{
+			  showInLegend: false,
+			  data: []
+			}],
+			plotOptions: {
+			  line: { animation: false,
+				dataLabels: { enabled: true }
+			  }
+			},
+			xAxis: {
+			  type: 'datetime',
+			  dateTimeLabelFormats: { second: '%H:%M:%S' }
+			},
+			yAxis: {
+			  title: { text: 'Humidity (%)' }
+			},
+			credits: { enabled: false }
+		  });
+		  setInterval(function ( ) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			  if (this.readyState == 4 && this.status == 200) {
+				var x = (new Date()).getTime(),
+					y = parseFloat(this.responseText);
+				//console.log(this.responseText);
+				if(chartH.series[0].data.length > 40) {
+				  chartH.series[0].addPoint([x, y], true, true, true);
+				} else {
+				  chartH.series[0].addPoint([x, y], true, false, true);
+				}
+			  }
+			};
+			xhttp.open("GET", "/humidity", true);
+			xhttp.send();
+		  }, 5000 );
+		</script>
+	</body>
+</html>	
+	
