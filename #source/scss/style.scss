@@ -208,25 +208,13 @@ body {
 	}
 }
 
-.link-earth {
-	display: inline-flex;
-	width: 28px;
-	height: 28px;
-	margin-left: 9px;
-	&:hover {
-		&:after{
-			width: 0;
-		}
-	}
-	@media (max-width:992px) {
-		width: 20px;
-		height: 20px;
-	}
-}
+
 /************************************************************
                		 STATUS-BLOCK
 ************************************************************/
 .status {
+
+	background: rgb(248, 248, 248);
 
 	&__row {
 		display: flex;
@@ -451,6 +439,169 @@ body {
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
+
+/*******************************************************************************
+							STATUS DATA BLOCK
+*******************************************************************************/
+
+.statusData {
+	
+	&-text {
+	}
+	&-numb {
+	}
+
+	// .statusData__curents
+
+	&__curents {
+	}
+
+	// .statusData__curents-a
+
+	&__curents-a {
+	}
+
+	// .statusData__curents-a-text
+
+	&__curents-a-text {
+	}
+
+	// .statusData__curents-a-data
+
+	&__curents-a-data {
+	}
+
+	// .statusData__curents-b
+
+	&__curents-b {
+	}
+
+	// .statusData__curents-b-text
+
+	&__curents-b-text {
+	}
+
+	// .statusData__curents-b-data
+
+	&__curents-b-data {
+	}
+
+	// .statusData__curents-c
+
+	&__curents-c {
+	}
+
+	// .statusData__curents-c-text
+
+	&__curents-c-text {
+	}
+
+	// .statusData__curents-c-data
+
+	&__curents-c-data {
+	}
+
+	// .statusData__inputs
+
+	&__inputs {
+	}
+
+	// .statusData__inputs-switchON
+
+	&__inputs-switchON {
+	}
+
+	// .statusData__inputs-switchON-text
+
+	&__inputs-switchON-text {
+	}
+
+	// .statusData__inputs-switchON-data
+
+	&__inputs-switchON-data {
+	}
+
+	// .statusData__inputs-switchOFF
+
+	&__inputs-switchOFF {
+	}
+
+	// .statusData__inputs-switchOFF-text
+
+	&__inputs-switchOFF-text {
+	}
+
+	// .statusData__inputs-switchOFF-data
+
+	&__inputs-switchOFF-data {
+	}
+
+	// .statusData__inputs-block
+
+	&__inputs-block {
+	}
+
+	// .statusData__inputs-block-text
+
+	&__inputs-block-text {
+	}
+
+	// .statusData__inputs-block-data
+
+	&__inputs-block-data {
+	}
+
+	// .statusData__voltage
+
+	&__voltage {
+	}
+
+	// .statusData__voltage-input
+
+	&__voltage-input {
+	}
+
+	// .statusData__voltage-input-text
+
+	&__voltage-input-text {
+	}
+
+	// .statusData__voltage-input-data
+
+	&__voltage-input-data {
+	}
+
+	// .statusData__voltage-kl
+
+	&__voltage-kl {
+	}
+
+	// .statusData__voltage-kl-text
+
+	&__voltage-kl-text {
+	}
+
+	// .statusData__voltage-kl-data
+
+	&__voltage-kl-data {
+	}
+
+	// .statusData__voltage-temp
+
+	&__voltage-temp {
+	}
+
+	// .statusData__voltage-temp-text
+
+	&__voltage-temp-text {
+	}
+
+	// .statusData__voltage-temp-data
+
+	&__voltage-temp-data {
+	}
+}
+
 
 
 
