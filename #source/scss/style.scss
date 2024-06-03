@@ -224,6 +224,126 @@ body {
 	}
 }
 /************************************************************
+               		 STATUS-BLOCK
+************************************************************/
+.status {
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0px 23px 0px;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__row-status, &__row-diag {
+		display: flex;
+		justify-content: space-between;
+		&_sost, &-text {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			font-family: "Montserrat","PT Serif",sans-serif;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 15px;
+			letter-spacing: 0px;
+			text-align: left;
+			&-btn, &-norm {
+				width: 120px;
+				height: 27px;
+				border-radius: 30px;
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+				background: rgb(0, 115, 151);
+				color: rgb(255, 255, 255);
+				margin: 0px 17px;
+				font-family: "Montserrat","PT Serif",sans-serif;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 15px;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				padding: 6px 18px 6px 18px;
+			}
+		}
+
+	}
+
+	&__row-diag {
+		padding-top: 13px;
+	}
+	
+	&__row-time {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__column-time {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 67px;
+
+		&-row {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 6px;
+			
+			&-TextData, &-TextTime {
+				color: rgb(0, 0, 0);
+				font-family: "Montserrat","PT Serif",sans-serif;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 15px;
+				letter-spacing: 0px;
+				text-align: left;
+
+			}
+			&-DataData, &-DataTime {
+				color: rgb(0, 115, 151);
+				font-family: "Montserrat","PT Serif",sans-serif;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 15px;
+				letter-spacing: 0px;
+				text-align: left;
+
+			}
+			 
+		}
+
+		&-btn {
+			border-radius: 30px;
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+			background: rgb(0, 115, 151);
+			&-btn {
+				color: rgb(255, 255, 255);
+				font-family: "Montserrat","PT Serif",sans-serif;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 15px;
+				letter-spacing: 0px;
+				text-align: center;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				padding: 6px 18px 6px 18px;
+			}
+		}
+	}
+
+}
+
+
+
+/************************************************************
                		 MAIN-BLOCK
 ************************************************************/
 .mainblock {
@@ -292,7 +412,7 @@ body {
 .highcharts-figure,
 .highcharts-data-table table {
     min-width: 360px;
-    max-width: 800px;
+    max-width: 1170px;
     margin: 1em auto;
 }
 

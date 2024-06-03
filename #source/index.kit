@@ -17,14 +17,33 @@
 				<!-- @import "header.html" -->
 				<section class="status">
 					<div class="_container">
-						<div class="status__body">
-							<div class="status__body-status">
+						<div class="status__row">
+							<div class="status__colum">
+								<div class="status__row-status">
+									<p class="status__row-status_sost">СОСТОЯНИЕ ВЫКЛЮЧАТЕЛЯ</p>
+									<a href="" class="status__row-status_sost-btn">ВЫКЛЮЧЕН</a>
+								</div>
+								<div class="status__row-diag">
+									<p class="status__row-diag-text">ДИАГНОСТИКА</p>
+									<a href="" class="status__row-diag-text-norm">НОРМА</a>
+								</div>
+							</div>
+							<div class="status__row-time">
+								<div class="status__column-time">
+									<div class="status__column-time-row">
+										<p class="status__column-time-row-TextData">ДАТА</p>
+										<p class="status__column-time-row-DataData">03.06.2024</p>
+										<p class="status__column-time-row-TextTime">ВРЕМЯ</p>
+										<p class="status__column-time-row-DataTime">13:00</p>
+									</div>
+									<div class="status__column-time-btn">
+										<a href="" class="status__column-time-btn-btn">СИНХРОНИЗИРОВАТЬ ДАТУ И ВРЕМЯ</a>
+									</div>
+								</div>
 
 							</div>
-							<div class="status__body-time">
-								
-							</div>
 						</div>
+
 					</div>
 				</section>
 				
@@ -32,8 +51,11 @@
 					<div class="_container">
 						<section class="mainblock__status">
 							<!--Пробую вставить график температуры и влажности через библиотеку-->
-  							<div id="chart-temperature" class="container"></div>
-  							<div id="chart-humidity" class="container"></div> 
+							<figure class="highcharts-figure">
+								<div class="mainblock__body" id="chart-current" class="container"></div>
+								<p class="highcharts-description"></p>
+							</figure>
+							<div class="mainblock__body" id="chart-voltage" class="container"></div> 
 						</section>
 					</div>
 				</section>
@@ -52,7 +74,6 @@
 			</main>
 		</div>
 		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-		<script src="js/slick.min.js"></script>
 		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
 		<script src="js/highcharts.js"></script>
 		<script src="js/series-label.js"></script>
@@ -60,87 +81,7 @@
 		<script src="js/export-data.js"></script>
 		<script src="js/accessibility.js"></script>
 		<script src="js/script.js"></script>
-		<!--Пробую вставить график по температуре и давлению-->
-		<script>
-		var chartT = new Highcharts.Chart({
-			chart:{ renderTo : 'chart-temperature' },
-			title: { text: 'DHT11 Temperature' },
-			series: [{
-			  showInLegend: false,
-			  data: []
-			}],
-			plotOptions: {
-			  line: { animation: false,
-				dataLabels: { enabled: true }
-			  },
-			  series: { color: '#059e8a' }
-			},
-			xAxis: { type: 'datetime',
-			  dateTimeLabelFormats: { second: '%H:%M:%S' }
-			},
-			yAxis: {
-			  title: { text: 'Temperature (Celsius)' }
-			  //title: { text: 'Temperature (Fahrenheit)' }
-			},
-			credits: { enabled: false }
-		  });
-		  setInterval(function ( ) {
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-			  if (this.readyState == 4 && this.status == 200) {
-				var x = (new Date()).getTime(),
-					y = parseFloat(this.responseText);
-				//console.log(this.responseText);
-				if(chartT.series[0].data.length > 40) {
-				  chartT.series[0].addPoint([x, y], true, true, true);
-				} else {
-				  chartT.series[0].addPoint([x, y], true, false, true);
-				}
-			  }
-			};
-			xhttp.open("GET", "/temperature", true);
-			xhttp.send();
-		  }, 5000 ) ;
-		  
-		  var chartH = new Highcharts.Chart({
-			chart:{ renderTo:'chart-humidity' },
-			title: { text: 'DHT11 Humidity' },
-			series: [{
-			  showInLegend: false,
-			  data: []
-			}],
-			plotOptions: {
-			  line: { animation: false,
-				dataLabels: { enabled: true }
-			  }
-			},
-			xAxis: {
-			  type: 'datetime',
-			  dateTimeLabelFormats: { second: '%H:%M:%S' }
-			},
-			yAxis: {
-			  title: { text: 'Humidity (%)' }
-			},
-			credits: { enabled: false }
-		  });
-		  setInterval(function ( ) {
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-			  if (this.readyState == 4 && this.status == 200) {
-				var x = (new Date()).getTime(),
-					y = parseFloat(this.responseText);
-				//console.log(this.responseText);
-				if(chartH.series[0].data.length > 40) {
-				  chartH.series[0].addPoint([x, y], true, true, true);
-				} else {
-				  chartH.series[0].addPoint([x, y], true, false, true);
-				}
-			  }
-			};
-			xhttp.open("GET", "/humidity", true);
-			xhttp.send();
-		  }, 5000 );
-		</script>
+		
 	</body>
 </html>	
 	
