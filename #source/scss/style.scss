@@ -445,163 +445,190 @@ body {
 *******************************************************************************/
 
 .statusData {
-	
+	margin-top: -60px;
+	margin-bottom: 20px;
+	background-color: rgb(248,248,248);
+	padding: 20px;
+	&__column {
+		display: flex;
+		justify-content: space-between;
+		
+	}
+
 	&-text {
+	color: rgb(0, 0, 0);
+	font-family: "Montserrat","PT Serif",sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 15px;
+	letter-spacing: 0px;
+	text-align: left;
 	}
 	&-numb {
+	color: rgb(0, 115, 151);
+	font-family: "Montserrat","PT Serif",sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 15px;
+	letter-spacing: 0px;
+	text-align: left;
 	}
 
 	// .statusData__curents
 
 	&__curents {
+		min-height: 100px;
+		min-width: 155px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&-a {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+
+			}
+			&-data {
+			}
+		}
+		&-b {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+
+			}
+			&-data {
+
+			}
+		}
+		&-c {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+
+			}
+			&-data {
+
+			}
+		}
 	}
-
-	// .statusData__curents-a
-
-	&__curents-a {
-	}
-
-	// .statusData__curents-a-text
-
-	&__curents-a-text {
-	}
-
-	// .statusData__curents-a-data
-
-	&__curents-a-data {
-	}
-
-	// .statusData__curents-b
-
-	&__curents-b {
-	}
-
-	// .statusData__curents-b-text
-
-	&__curents-b-text {
-	}
-
-	// .statusData__curents-b-data
-
-	&__curents-b-data {
-	}
-
-	// .statusData__curents-c
-
-	&__curents-c {
-	}
-
-	// .statusData__curents-c-text
-
-	&__curents-c-text {
-	}
-
-	// .statusData__curents-c-data
-
-	&__curents-c-data {
-	}
-
-	// .statusData__inputs
 
 	&__inputs {
+		min-height: 100px;
+		min-width: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&-switchON {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+			}
+			&-data {
+			}
+		}
+		&-switchOFF {
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+			}
+			&-data {
+			}
+		}
+		&-block {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+			}
+			&-data {
+			}
+		}
 	}
 
-	// .statusData__inputs-switchON
-
-	&__inputs-switchON {
-	}
-
-	// .statusData__inputs-switchON-text
-
-	&__inputs-switchON-text {
-	}
-
-	// .statusData__inputs-switchON-data
-
-	&__inputs-switchON-data {
-	}
-
-	// .statusData__inputs-switchOFF
-
-	&__inputs-switchOFF {
-	}
-
-	// .statusData__inputs-switchOFF-text
-
-	&__inputs-switchOFF-text {
-	}
-
-	// .statusData__inputs-switchOFF-data
-
-	&__inputs-switchOFF-data {
-	}
-
-	// .statusData__inputs-block
-
-	&__inputs-block {
-	}
-
-	// .statusData__inputs-block-text
-
-	&__inputs-block-text {
-	}
-
-	// .statusData__inputs-block-data
-
-	&__inputs-block-data {
-	}
-
-	// .statusData__voltage
 
 	&__voltage {
+		min-height: 100px;
+		min-width: 280px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&-input {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+			}
+			&-data {
+			}
+		}
+		&-kl {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+			}
+			&-data {
+			}
+		}
+		&-temp {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-text {
+			}
+			&-data {
+			}
+		}
 	}
+} 
 
-	// .statusData__voltage-input
+.settings {
 
-	&__voltage-input {
-	}
-
-	// .statusData__voltage-input-text
-
-	&__voltage-input-text {
-	}
-
-	// .statusData__voltage-input-data
-
-	&__voltage-input-data {
-	}
-
-	// .statusData__voltage-kl
-
-	&__voltage-kl {
-	}
-
-	// .statusData__voltage-kl-text
-
-	&__voltage-kl-text {
-	}
-
-	// .statusData__voltage-kl-data
-
-	&__voltage-kl-data {
-	}
-
-	// .statusData__voltage-temp
-
-	&__voltage-temp {
-	}
-
-	// .statusData__voltage-temp-text
-
-	&__voltage-temp-text {
-	}
-
-	// .statusData__voltage-temp-data
-
-	&__voltage-temp-data {
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&-btn {
+				width: 120px;
+				height: 27px;
+				border-radius: 30px;
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+				background: rgb(0, 115, 151);
+				color: rgb(255, 255, 255);
+				margin: 0px 17px;
+				font-family: "Montserrat","PT Serif",sans-serif;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 15px;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				padding: 10px 20px 10px 20px;
+				&:hover {
+					color: black;
+					background-color: #ebebeb;
+					transition: 2s linear, 2s linear;
+					&:after {
+						transition: 2s linear;
+						background: rgb(0, 115, 151);
+						color: rgb(255, 255, 255);
+						
+					}
+				}
+				
+				
+		}
 	}
 }
-
 
 
 
@@ -613,7 +640,7 @@ body {
 
 .footer {
 
-	margin: 0px 0px 40px 0px;
+	margin: 20px 0px 40px 0px;
 
 	&__row {
 		display: flex;
@@ -630,8 +657,8 @@ body {
 		font-size: 12px;
 		font-weight: 700;
 		letter-spacing: 1px;
-		line-height: 40px;
-		text-align: left;
+		line-height: 16px;
+		text-align: center;
 		text-transform: uppercase;
 		@media (max-width: 550px) {
 			text-align: center;
@@ -639,11 +666,22 @@ body {
 	}
 
 	&__sections {
+		color: #646667;
+		font-family: "Montserrat","PT Serif",sans-serif;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		line-height: 16px;
+		text-align: center;
+		text-transform: uppercase;
+		@media (max-width: 550px) {
+			text-align: center;
+		}
 	}
 
 	&__link {
 		color: #646667;
-		font-family: "Montserrat";
+		font-family: "Montserrat","PT Serif",sans-serif;
 		font-size: 12px;
 		font-weight: 700;
 		letter-spacing: 1px;
