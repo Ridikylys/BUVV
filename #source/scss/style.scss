@@ -220,16 +220,31 @@ body {
 		display: flex;
 		justify-content: space-between;
 		padding: 20px 0px 23px 0px;
+		@media (max-width: 714px){
+			padding: 10px 0px 10px 0px;
+			flex-direction: column;
+		}
 	}
 
 	&__column {
 		display: flex;
 		flex-direction: column;
+		@media (max-width: 714px) {
+		display: flex;
+    	flex-direction: column;
+    	justify-self: center;
+    	justify-content: center;
+    	align-items: center;
+		}
+		
 	}
 
 	&__row-status, &__row-diag {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 714px){
+			justify-content: center;
+		}
 		&_sost, &-text {
 			display: flex;
 			flex-direction: row;
@@ -241,6 +256,9 @@ body {
 			line-height: 15px;
 			letter-spacing: 0px;
 			text-align: left;
+			@media (max-width: 396px) {
+				font-size: 10px;
+			}
 			&-btn, &-norm {
 				width: 120px;
 				height: 27px;
@@ -258,13 +276,19 @@ body {
 				justify-content: center;
 				align-items: center;
 				padding: 6px 18px 6px 18px;
+				@media (max-width: 396px) {
+					font-size: 10px;
+					width: 100px;
+					padding: 3px 9px 3px 9px;
+					margin: 7px;
+				}
 			}
 		}
 
 	}
 
 	&__row-diag {
-		padding-top: 13px;
+		padding-top: 10px;
 	}
 	
 	&__row-time {
@@ -277,11 +301,20 @@ body {
 		flex-direction: column;
 		justify-content: space-between;
 		min-height: 67px;
+		@media (max-width: 714px) {
+			align-items: center;
+			}
+		
 
 		&-row {
 			display: flex;
 			justify-content: space-between;
 			padding-top: 6px;
+			@media (max-width: 714px){
+				justify-content: space-around;
+				min-width: 300px;
+				padding-top: 10px;
+			}
 			
 			&-TextData, &-TextTime {
 				color: rgb(0, 0, 0);
@@ -291,6 +324,9 @@ body {
 				line-height: 15px;
 				letter-spacing: 0px;
 				text-align: left;
+				@media (max-width: 396px) {
+					font-size: 10px;
+				}
 
 			}
 			&-DataData, &-DataTime {
@@ -301,6 +337,9 @@ body {
 				line-height: 15px;
 				letter-spacing: 0px;
 				text-align: left;
+				@media (max-width: 396px) {
+					font-size: 10px;
+				}
 
 			}
 			 
@@ -310,6 +349,10 @@ body {
 			border-radius: 30px;
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 			background: rgb(0, 115, 151);
+			@media (max-width:714px) {
+				min-width: 300px;
+    			margin-top: 10px;
+			}
 			&-btn {
 				color: rgb(255, 255, 255);
 				font-family: "Montserrat","PT Serif",sans-serif;
@@ -323,6 +366,9 @@ body {
 				justify-content: center;
 				align-items: center;
 				padding: 6px 18px 6px 18px;
+				@media (max-width: 396px) {
+					font-size: 10px;
+				}
 			}
 		}
 	}
@@ -606,23 +652,19 @@ body {
 				margin: 0px 17px;
 				font-family: "Montserrat","PT Serif",sans-serif;
 				font-size: 14px;
-				font-weight: 600;
+				font-weight: 400;
 				line-height: 15px;
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
 				align-items: center;
 				padding: 10px 20px 10px 20px;
+				transition: 1s;
 				&:hover {
-					color: black;
+					color: rgb(0, 115, 151);
 					background-color: #ebebeb;
-					transition: 2s linear, 2s linear;
-					&:after {
-						transition: 2s linear;
-						background: rgb(0, 115, 151);
-						color: rgb(255, 255, 255);
-						
-					}
+					transition: 1s linear;
+					
 				}
 				
 				
