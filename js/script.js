@@ -67,7 +67,6 @@ var chartC = new Highcharts.Chart('chart-current', {
     responsive: {
         rules: [{
             condition: {
-                maxWidth: 500
             },
             chartOptions: {
                 legend: {
@@ -87,9 +86,9 @@ var chartC = new Highcharts.Chart('chart-current', {
 			chart:{ renderTo : 'chart-voltage' },
 			title: { text: 'Напряжения питания' },
 			legend: {
-				layout: 'vertical',
-				align: 'right',
-				verticalAlign: 'middle'
+				layout: 'horizontal',
+				align: 'center',
+				verticalAlign: 'bottom'
 			},
 			series: [
 				{
