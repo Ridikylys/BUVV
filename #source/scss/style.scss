@@ -7,6 +7,7 @@
                 	FONTS
 ************************************************************/
 @import "fonts";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /************************************************************
                 	MIXIN
 ************************************************************/
@@ -33,9 +34,10 @@ $maxWidth: 1170;
 
 //------Общие параметры---------------------------------------------
 body {
-	font-family: "Montserrat", "PT Serif", "sans-serif";
-	font-size: 16px;
-	font-weight: 700;
+	font-family: 'Roboto', sans-serif, 'PT Serif';
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 15px;
 	background-color: #ffffff;
 }
 
@@ -174,6 +176,7 @@ body {
 		position: relative;
 		line-height: 28px;
 		font-family: "Montserrat","PT Serif",sans-serif;
+		font-weight: 700;
 		//, "PT Serif", 
 		@media (max-width:992px) {
 			font-size: 11px;
@@ -252,10 +255,6 @@ body {
 			flex-direction: row;
 			justify-content: flex-start;
 			align-items: center;
-			font-family: "Montserrat","PT Serif",sans-serif;
-			font-size: 14px;
-			font-weight: 600;
-			line-height: 15px;
 			letter-spacing: 0px;
 			text-align: left;
 			@media (max-width: 420px) {
@@ -269,10 +268,6 @@ body {
 				background: rgb(0, 115, 151);
 				color: rgb(255, 255, 255);
 				margin: 0px 17px;
-				font-family: "Montserrat","PT Serif",sans-serif;
-				font-size: 14px;
-				font-weight: 400;
-				line-height: 15px;
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
@@ -320,10 +315,6 @@ body {
 			
 			&-TextData, &-TextTime {
 				color: rgb(0, 0, 0);
-				font-family: "Montserrat","PT Serif",sans-serif;
-				font-size: 14px;
-				font-weight: 600;
-				line-height: 15px;
 				letter-spacing: 0px;
 				text-align: left;
 				@media (max-width: 420px) {
@@ -333,10 +324,6 @@ body {
 			}
 			&-DataData, &-DataTime {
 				color: rgb(0, 115, 151);
-				font-family: "Montserrat","PT Serif",sans-serif;
-				font-size: 14px;
-				font-weight: 600;
-				line-height: 15px;
 				letter-spacing: 0px;
 				text-align: left;
 				@media (max-width: 420px) {
@@ -360,10 +347,6 @@ body {
 			}
 			&-btn {
 				color: rgb(255, 255, 255);
-				font-family: "Montserrat","PT Serif",sans-serif;
-				font-size: 14px;
-				font-weight: 400;
-				line-height: 15px;
 				letter-spacing: 0px;
 				text-align: center;
 				display: flex;
@@ -378,7 +361,8 @@ body {
 				&:hover {
 					color: rgb(0, 115, 151);
 					background-color: #ffffff;
-					font-weight: 400;
+					font-weight: 500;
+					letter-spacing: 0px;
 					transition: 0.2s linear;
 					border-radius: 30px;
 					box-shadow: 0px 4px 4px 0px rgb(0, 115, 151);
@@ -546,10 +530,6 @@ body {
 
 	&-text {
 		color: rgb(0, 0, 0);
-		font-family: "Montserrat","PT Serif",sans-serif;
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 15px;
 		letter-spacing: 0px;
 		text-align: left;
 
@@ -560,10 +540,6 @@ body {
 
 	&-numb {
 	color: rgb(0, 115, 151);
-	font-family: "Montserrat","PT Serif",sans-serif;
-	font-size: 14px;
-	font-weight: 600;
-	line-height: 15px;
 	letter-spacing: 0px;
 	text-align: left;
 	@media (max-width: 420px) {
@@ -743,10 +719,6 @@ body {
 				background: rgb(0, 115, 151);
 				color: rgb(255, 255, 255);
 				margin: 0px 17px;
-				font-family: "Montserrat","PT Serif",sans-serif;
-				font-size: 14px;
-				font-weight: 400;
-				line-height: 15px;
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
@@ -756,7 +728,6 @@ body {
 				&:hover {
 					color: rgb(0, 115, 151);
 					background-color: #ffffff;
-					font-weight: 600;
 					transition: 0.2s linear;
 					
 				}
