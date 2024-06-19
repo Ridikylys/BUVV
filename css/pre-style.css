@@ -379,6 +379,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (max-width: 714px) {
   .status__column {
@@ -590,6 +593,79 @@ body {
   border-radius: 30px;
   -webkit-box-shadow: 0px 4px 4px 0px rgb(0, 115, 151);
           box-shadow: 0px 4px 4px 0px rgb(0, 115, 151);
+}
+
+.button {
+  float: left;
+  position: relative;
+  text-transform: uppercase;
+  color: #000000;
+  cursor: pointer;
+}
+.button .label {
+  padding: 10px;
+  display: inline-block;
+}
+.button.v8:hover .icon {
+  -webkit-transform: scale(1.1) skew(-40deg, 0deg);
+          transform: scale(1.1) skew(-40deg, 0deg);
+}
+.button.v8:hover .icon:before, .button.v8:hover .icon:after {
+  width: 100%;
+}
+.button.v8:hover .icon span:before, .button.v8:hover .icon span:after {
+  height: 100%;
+}
+.button.v8 .label {
+  padding: 10px 22px;
+}
+.button.v8 .icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: skew(-40deg, 0deg);
+          transform: skew(-40deg, 0deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.button.v8 .icon:before, .button.v8 .icon:after {
+  content: "";
+  height: 1px;
+  width: 30px;
+  position: absolute;
+  display: block;
+  background: #007397;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+.button.v8 .icon:before {
+  left: 0;
+  top: 0;
+}
+.button.v8 .icon:after {
+  right: 0;
+  bottom: 0;
+}
+.button.v8 .icon span:before, .button.v8 .icon span:after {
+  content: "";
+  background: #007397;
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 30px;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.button.v8 .icon span:before {
+  left: 0;
+  top: 0;
+}
+.button.v8 .icon span:after {
+  right: 0;
+  bottom: 0;
 }
 
 /************************************************************
