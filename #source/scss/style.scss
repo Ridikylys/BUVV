@@ -180,6 +180,7 @@ body {
 		//, "PT Serif", 
 		@media (max-width:992px) {
 			font-size: 11px;
+			letter-spacing: 0px;
 		}
 		@media (max-width: 767px) {
 			font-size: 14px;
@@ -225,7 +226,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		padding: 20px 0px 23px 0px;
-		@media (max-width: 714px){
+		@media (max-width: 730px){
 			padding: 10px 0px 10px 0px;
 			flex-direction: column;
 		}
@@ -235,7 +236,7 @@ body {
 		display: flex;
     	flex-direction: column;
     	justify-content: space-between;
-		@media (max-width: 714px) {
+		@media (max-width: 730px) {
 		display: flex;
     	flex-direction: column;
     	justify-self: center;
@@ -248,7 +249,7 @@ body {
 	&__row-status, &__row-diag {
 		display: flex;
 		justify-content: space-between;
-		@media (max-width: 714px){
+		@media (max-width: 730px){
 			justify-content: center;
 		}
 		&_sost, &-text {
@@ -278,7 +279,7 @@ body {
 					font-size: 10px;
 					width: 80px;
 					padding: 3px 9px 3px 9px;
-					margin: 7px;
+					margin: 0px 7px;
 				}
 			}
 		}
@@ -299,7 +300,7 @@ body {
 		flex-direction: column;
 		justify-content: space-between;
 		min-height: 67px;
-		@media (max-width: 714px) {
+		@media (max-width: 730px) {
 			align-items: center;
 			}
 		
@@ -308,10 +309,13 @@ body {
 			display: flex;
 			justify-content: space-between;
 			padding-top: 6px;
-			@media (max-width: 714px){
-				justify-content: space-around;
-				min-width: 250px;
+			@media (max-width: 730px){
+				justify-content: space-between;
+				width: 250px;
 				padding-top: 10px;
+			}
+			@media (max-width: 420px) {
+				width: 200px;
 			}
 			
 			&-TextData, &-TextTime {
@@ -339,7 +343,7 @@ body {
 			border-radius: 30px;
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 			background: rgb(0, 115, 151);
-			@media (max-width:714px) {
+			@media (max-width:730px) {
 				min-width: 300px;
     			margin-top: 10px;
 				@media (max-width: 420px) {
@@ -382,6 +386,11 @@ body {
     text-transform: uppercase;
     color: #000000;
     cursor: pointer;
+	left: 16px;
+	top: 2px;
+	@media (max-width: 420px) {
+		font-size: 10px;
+	}
 
 
     .label{
@@ -407,23 +416,30 @@ body {
 		}
   
 		.label{
-		  padding: 10px 22px;
+		  padding: 10px 20px;
+		  margin-right: 40px;
+		  @media (max-width: 420px) {
+			padding: 5px 12px;
+		}
 		}
   
 		.icon{
 		  display: block;
 		  position: absolute;
 		  top: 0;
-		  left: 0;
-		  width: 100%;
+		  left: 5px;
+		  width: 85%;
 		  height: 100%;
 		  transform: skew(-40deg, 0deg);
 		  transition: all 0.5s;
+		  @media (max-width: 420px) {
+			width: 81%;
+		}
   
 		  &:before, &:after{
 			content: '';
 			height: 1px;
-			width: 30px;
+			width: 20px;
 			position: absolute;
 			display: block;
 			background: #007397;
@@ -445,7 +461,7 @@ body {
 			  position: absolute;
 			  display: block;
 			  width: 2px;
-			  height: 30px;
+			  height: 20px;
 			  transition: height 0.5s;
 			}
 			&:before{

@@ -313,6 +313,7 @@ body {
 @media (max-width: 992px) {
   .menu__link {
     font-size: 11px;
+    letter-spacing: 0px;
   }
 }
 @media (max-width: 767px) {
@@ -362,7 +363,7 @@ body {
           justify-content: space-between;
   padding: 20px 0px 23px 0px;
 }
-@media (max-width: 714px) {
+@media (max-width: 730px) {
   .status__row {
     padding: 10px 0px 10px 0px;
     -webkit-box-orient: vertical;
@@ -383,7 +384,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 714px) {
+@media (max-width: 730px) {
   .status__column {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -410,7 +411,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 714px) {
+@media (max-width: 730px) {
   .status__row-status, .status__row-diag {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -468,7 +469,7 @@ body {
     font-size: 10px;
     width: 80px;
     padding: 3px 9px 3px 9px;
-    margin: 7px;
+    margin: 0px 7px;
   }
 }
 .status__row-diag {
@@ -496,7 +497,7 @@ body {
           justify-content: space-between;
   min-height: 67px;
 }
-@media (max-width: 714px) {
+@media (max-width: 730px) {
   .status__column-time {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -512,12 +513,18 @@ body {
           justify-content: space-between;
   padding-top: 6px;
 }
-@media (max-width: 714px) {
+@media (max-width: 730px) {
   .status__column-time-row {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    min-width: 250px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 250px;
     padding-top: 10px;
+  }
+}
+@media (max-width: 420px) {
+  .status__column-time-row {
+    width: 200px;
   }
 }
 .status__column-time-row-TextData, .status__column-time-row-TextTime {
@@ -546,13 +553,13 @@ body {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: rgb(0, 115, 151);
 }
-@media (max-width: 714px) {
+@media (max-width: 730px) {
   .status__column-time-btn {
     min-width: 300px;
     margin-top: 10px;
   }
 }
-@media (max-width: 714px) and (max-width: 420px) {
+@media (max-width: 730px) and (max-width: 420px) {
   .status__column-time-btn {
     min-width: 250px;
   }
@@ -601,6 +608,13 @@ body {
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
+  left: 16px;
+  top: 2px;
+}
+@media (max-width: 420px) {
+  .button {
+    font-size: 10px;
+  }
 }
 .button .label {
   padding: 10px;
@@ -617,24 +631,35 @@ body {
   height: 100%;
 }
 .button.v8 .label {
-  padding: 10px 22px;
+  padding: 10px 20px;
+  margin-right: 40px;
+}
+@media (max-width: 420px) {
+  .button.v8 .label {
+    padding: 5px 12px;
+  }
 }
 .button.v8 .icon {
   display: block;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 5px;
+  width: 85%;
   height: 100%;
   -webkit-transform: skew(-40deg, 0deg);
           transform: skew(-40deg, 0deg);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+@media (max-width: 420px) {
+  .button.v8 .icon {
+    width: 81%;
+  }
+}
 .button.v8 .icon:before, .button.v8 .icon:after {
   content: "";
   height: 1px;
-  width: 30px;
+  width: 20px;
   position: absolute;
   display: block;
   background: #007397;
@@ -655,7 +680,7 @@ body {
   position: absolute;
   display: block;
   width: 2px;
-  height: 30px;
+  height: 20px;
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
