@@ -807,11 +807,24 @@ body {
 } 
 
 .settings {
-
-	&__btn {
-		display: flex;
-		justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	&__btn-settings {
+   	 	position: relative;
 		align-items: center;
+		//left:37%;
+    	//font-family: arial;
+    	text-transform: uppercase;
+    	color: #000000;
+    	cursor: pointer;
+		@media (max-width: 420px) {
+			font-size: 10px;
+		}
+		//left: 16px;
+		//top: 2px;
+		/**
 		&-btn {
 				width: 120px;
 				height: 27px;
@@ -834,10 +847,18 @@ body {
 				}
 				
 				
-		}
+		}**/
 	}
 }
 
+.label-settings {
+	color: #000000;
+	font-family: 'Roboto', sans-serif, 'PT Serif';
+	margin-right: 10px;
+	padding: 10px 20px;
+	display: inline-block;
+	font-weight: 600;
+}
 
 
 
@@ -893,3 +914,25 @@ body {
 
 }
 
+/*******************************************************************************
+							INDEX-SETTINGS PAGE!!!!!!!!!!
+*******************************************************************************/
+form {
+	border: #000000 1px;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border: #000000 1px;
+}
+legend {
+	align-items: center;
+	text-align: center;
+	padding-bottom: 15px;
+}
+/*******************************************************************************
+							FOOTER
+*******************************************************************************/

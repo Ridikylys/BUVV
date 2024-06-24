@@ -1093,7 +1093,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.settings__btn {
+.settings {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1104,37 +1104,52 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.settings__btn-btn {
-  width: 120px;
-  height: 27px;
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background: rgb(0, 115, 151);
-  color: rgb(255, 255, 255);
-  margin: 0px 17px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.settings__btn-settings {
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px 10px 20px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  text-transform: uppercase;
+  color: #000000;
+  cursor: pointer;
+  /**
+  &-btn {
+  		width: 120px;
+  		height: 27px;
+  		border-radius: 30px;
+  		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  		background: rgb(0, 115, 151);
+  		color: rgb(255, 255, 255);
+  		margin: 0px 17px;
+  		display: flex;
+  		flex-direction: row;
+  		justify-content: center;
+  		align-items: center;
+  		padding: 10px 20px 10px 20px;
+  		transition: 0.2s;
+  		&:hover {
+  			color: rgb(0, 115, 151);
+  			background-color: #ffffff;
+  			transition: 0.2s linear;
+
+  		}
+
+
+  }**/
 }
-.settings__btn-btn:hover {
-  color: rgb(0, 115, 151);
-  background-color: #ffffff;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+@media (max-width: 420px) {
+  .settings__btn-settings {
+    font-size: 10px;
+  }
+}
+
+.label-settings {
+  color: #000000;
+  font-family: "Roboto", sans-serif, "PT Serif";
+  margin-right: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: 600;
 }
 
 /*******************************************************************************
@@ -1193,3 +1208,39 @@ body {
     font-size: 10px;
   }
 }
+
+/*******************************************************************************
+							INDEX-SETTINGS PAGE!!!!!!!!!!
+*******************************************************************************/
+form {
+  border: #000000 1px;
+}
+
+fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: #000000 1px;
+}
+
+legend {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/*******************************************************************************
+							FOOTER
+*******************************************************************************/
