@@ -11,47 +11,54 @@
 	<body>
 		<!--Оболочка всей страницы-->
 		<!--Используется как флекс-контейнер, чтобы разнести футер и контент-->
-		<div class="wrapper">
-			<main class="page">
-				<!--Подключаем хедер обязательно в коментарии-->
-				<!-- @import "header.html" -->
-				<form action="localhost" method="POST">
-					<fieldset>
-						<legend>Токовые уставки</legend>
-						<div>
-							<label for="inom">Номинальный ток</label>
-							<input id="inom" name="inom" type="number">
-						</div>
-						<div>
-							<label for="tnom">Время срабатывания защиты</label>
-							<input id="tnom" name="tnom" type="number">
-						</div>
-					</fieldset>
-				</form>
-				<!--БЛОК -->
-				<section class="">
-					<div class="_container">
+		<div class="wrapper-settings">
+			<!--Подключаем хедер обязательно в коментарии-->
+			<!-- @import "header.html" -->
+			<section class="settings">
+				<div class="_container">
+					<h1>НАСТРОЙКИ</h1>
+					<form action="localhost" method="POST">
+						<fieldset>
+							<legend>Токовые уставки</legend>
+							<div class="settings-blocks">
+								<div class="inom-block">
+									<label for="inom">Номинальный ток, A</label>
+									<input class="inom-input" id="inom" name="inom" type="number" placeholder="Указать">
+								</div>
+								<div class="tzash-block">
+									<label for="tzash">Время срабатывания защиты, c</label>
+									<input class="tzash-input" id="tzash" name="tzash" type="number" placeholder="Указать">
+								</div>
+								<div class="izash-block">
+									<label for="izash">Ток срабатывания защиты, А</label>
+									<input class="izash-input" id="izash" name="izash" type="number" placeholder="Указать">
+								</div>
+							</div>	
+							<div class="button v8 button-submit">
+								<span class="label-set-btn"><button type="submit" class="set-sub-btn">Сохранить</button></span>
+								<span class="icon">
+									<span></span>
+								</span>
+							</div>							
+						</fieldset>
 						
+					</form>				
 
-					</div>
-				</section>
-
-				
-
-				
-				<!--Верстаем футер-->
-				<footer class="footer">
-					<div class="_container">
-						<div class="footer__row">
-							<div class="footer__copy">БУВВ-1 (BU-220-05A)
-							</div>
-							<div class="footer__sections">
-								ВСЕ ПРАВА ЗАЩИЩЕНЫ	
-							</div>
+				</div>
+			</section>
+			<!--Верстаем футер-->
+			<footer class="footer">
+				<div class="_container">
+					<div class="footer__row">
+						<div class="footer__copy">БУВВ-1 (BU-220-05A)
+						</div>
+						<div class="footer__sections">
+							ВСЕ ПРАВА ЗАЩИЩЕНЫ	
 						</div>
 					</div>
-				</footer>
-			</main>
+				</div>
+			</footer>
+
 		</div>
 		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
