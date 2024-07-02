@@ -1469,7 +1469,7 @@ input[type=number] {
   background: #f5ffff;
   border-collapse: collapse;
   text-align: left;
-  max-width: 800px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
