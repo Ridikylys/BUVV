@@ -1478,6 +1478,10 @@ input[type=number] {
           justify-content: center;
 }
 
+tbody {
+  width: 100%;
+}
+
 .table_blur th {
   border-top: 1px solid #777777;
   border-bottom: 1px solid #777777;
@@ -1490,12 +1494,12 @@ input[type=number] {
   position: relative;
 }
 
-.data-column, .time-column {
-  width: 20%;
+.event-column {
+  width: 50%;
 }
 
-.event-column {
-  width: 60%;
+.data-column, .time-column {
+  width: 1%;
 }
 
 .table_blur th:after {

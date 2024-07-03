@@ -1113,6 +1113,9 @@ input[type="number"] {
 	display: flex;
 	justify-content: center;
   }
+  tbody {
+	width: 100%;
+  }
   .table_blur th {
 	border-top: 1px solid #777777;	
 	border-bottom: 1px solid #777777; 
@@ -1121,16 +1124,17 @@ input[type="number"] {
 	color: white;
 	padding: 10px 15px;
 	position: relative;
-	//width: 40%;
+	//width: 100%;
   }
-
-  .data-column, .time-column {
-	width: 20%;
-  }
-
+  
   .event-column {
-	width: 60%;
+	width: 50%;
   }
+  .data-column, .time-column {
+	width: 1%;
+  }
+
+  
 
   .table_blur th:after {
 	content: "";
