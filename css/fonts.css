@@ -1,24 +1,21 @@
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/MontserratBold.eot");
-  src: local("O"), url("../fonts/MontserratBold.woff") format("woff"), url("../fonts/MontserratBold.ttf") format("truetype"), url("../fonts/MontserratBold.svg#MontserratBold") format("svg");
+  src: local("O"), url("../fonts/MontserratBold.woff") format("woff"), url("../fonts/MontserratBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/MontserratSemiBold.eot");
-  src: local("O"), url("../fonts/MontserratSemiBold.woff") format("woff"), url("../fonts/MontserratSemiBold.ttf") format("truetype"), url("../fonts/MontserratSemiBold.svg#MontserratSemiBold") format("svg");
+  src: local("O"), url("../fonts/MontserratSemiBold.woff") format("woff"), url("../fonts/MontserratSemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/MontserratRegular.eot");
-  src: local("O"), url("../fonts/MontserratRegular.woff") format("woff"), url("../fonts/MontserratRegular.ttf") format("truetype"), url("../fonts/MontserratRegular.svg#MontserratRegular") format("svg");
+  src: local("O"), url("../fonts/MontserratRegular.woff") format("woff"), url("../fonts/MontserratRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
