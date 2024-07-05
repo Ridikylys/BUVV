@@ -1050,6 +1050,7 @@ input[type="number"] {
 }
 
 .label-set-btn {
+	z-index: 1;
 	padding: 10px 20px;
 	margin-right: 10px;
 	@media (max-width: 450px) {
@@ -1093,6 +1094,8 @@ input[type="number"] {
 	display: flex;
 	flex: 1 1 auto;
 	justify-content: center;
+	overflow-y: auto;
+	overflow-x: hidden;
 
 	&-filter {
 		display: flex;
@@ -1249,3 +1252,14 @@ input[type="number"] {
 /*******************************************************************************
 							FOOTER
 *******************************************************************************/
+.footer-eventlog {
+	margin: 20px;
+}
+
+
+.diagnostics {
+	display: flex;
+	flex: 1 1 auto;
+	overflow: auto;
+	justify-content: center;
+}

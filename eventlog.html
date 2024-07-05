@@ -30,7 +30,7 @@
 									<li><a href="index.html" class="menu__link ">Состояние</a></li>
 									<li><a href="eventlog.html" class="menu__link menu__link-active">Журнал</a></li>
 									<li><a href="#" class="menu__link">История</a></li>
-									<li><a href="#" class="menu__link">Диагностика</a></li>
+									<li><a href="diagnostics.html" class="menu__link">Диагностика</a></li>
 									<li><a href="#" class="menu__link">Тех. поддержка</a></li>
 									<li><a href="#" class="menu__link">О производителе</a></li>
 								</ul>
@@ -42,7 +42,6 @@
 			<section class="eventlog">
 				<div class="_container-eventlog">
 					<h1 class="eventlog-title">ЖУРНАЛ СОБЫТИЙ</h1>
-					<form action="localhost" method="POST">
 						<fieldset class="eventlog-filter">
 							<legend>Фильтр</legend>
 							<div class="filter-blocks">
@@ -62,7 +61,6 @@
 								</span>
 							</div>							
 						</fieldset>
-					</form>	
 					<div class="eventlog-table">
 						<table class="table_blur">
 							<tr>
@@ -73,20 +71,26 @@
 							<tr>
 							  <td class="data-column">27.06.2024</td>
 							  <td class="time-column">12:00</td>
-							  <td class="event-column">Включение ВВ</td>
+							  <td class="event-column">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </td>
 							</tr>
 							<tr>
 							  <td class="data-column">27.06.2024</td>
 							  <td class="time-column">11:00</td>
 							  <td class="event-column">Выключение ВВ</td>
 							</tr>
-						  </table>
+							<tr>
+								<td class="data-column">27.06.2024</td>
+								<td class="time-column">11:00</td>
+								<td class="event-column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam omnis inventore, delectus neque amet alias a aliquam, suscipit doloribus velit nostrum facilis maiores ipsum earum voluptatum voluptatem quos. Voluptas numquam, dolorum minima ullam tenetur, in maiores autem aliquid corporis earum veritatis voluptate officiis id alias praesentium mollitia. Excepturi mollitia repellat porro est id laboriosam quam nostrum nihil beatae, tempora corporis accusantium ipsum explicabo! Doloribus?</td>
+							  </tr>
+
+						</table>
 					</div>			
 
 				</div>
 			</section>
 			<!--Верстаем футер-->
-			<footer class="footer">
+			<footer class="footer footer-eventlog">
 				<div class="_container">
 					<div class="footer__row">
 						<div class="footer__copy">БУВВ-1 (BU-220-05A)
@@ -102,6 +106,39 @@
 		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
 		<script src="js/default.js"></script>
+		<script >
+			function AppendLogTable(dtevent,mes){
+				let listtable = document.getElementsByClassName("eventlog-table");
+				let table = listtable[0].getElementsByTagName("table").item(0);
+				let body = table.getElementsByTagName("tbody");
+				let newrow =body[0].insertRow(1);
+				let dt = new Date(dtevent);
+				let cell = newrow.insertCell(0)
+				cell.className ="data-column"
+				cell.innerText = dt.toLocaleDateString();
+				cell = newrow.insertCell(1)
+				cell.className ="time-column"
+				cell.innerText = dt.toLocaleTimeString();
+				cell = newrow.insertCell(2)
+				cell.className ="event-column"
+				cell.innerText = mes;
+			}
+			function GetEventsLog(){
+				let dt1 =  Date();
+				AppendLogTable(dt1,"Проверка добавления в таблицу")
+			}
+			/**************
+			let listbuttons = document.getElementsByTagName("button")
+			for (let i = 0; i<listbuttons.length; i++ ) {
+			listbuttons[i].onclick=GetEventsLog;
+			console.log(listbuttons);
+			}*****/
+
+			$('.set-sub-btn').click(function(event) {
+				GetEventsLog();
+				console.log(listbuttons);
+			});
+		</script>
 		
 	</body>
 </html>	

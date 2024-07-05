@@ -12,8 +12,33 @@
 		<!--Оболочка всей страницы-->
 		<!--Используется как флекс-контейнер, чтобы разнести футер и контент-->
 		<div class="wrapper-settings">
-			<!--Подключаем хедер обязательно в коментарии-->
-			<!-- @import "header.html" -->
+			<header class="header">
+				<div class="_container">
+					<div class="header__row">
+						<div class="header__logo">
+							<a href="#"><img src="img/logo.svg" alt="logo"></a>
+						</div>
+						<nav class="header__menu menu">
+							<!--Под бургер меню-->
+							<div class="menu__icon icon-menu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="menu__body">
+								<ul class="menu__list">
+									<li><a href="index.html" class="menu__link ">Состояние</a></li>
+									<li><a href="eventlog.html" class="menu__link">Журнал</a></li>
+									<li><a href="#" class="menu__link">История</a></li>
+									<li><a href="diagnostics.html" class="menu__link menu__link-active">Диагностика</a></li>
+									<li><a href="#" class="menu__link">Тех. поддержка</a></li>
+									<li><a href="#" class="menu__link">О производителе</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>	
+				</div>
+			</header>
 			<section class="settings">
 				<div class="_container">
 					<h1>НАСТРОЙКИ</h1>

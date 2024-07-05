@@ -1391,6 +1391,7 @@ input[type=number] {
 }
 
 .label-set-btn {
+  z-index: 1;
   padding: 10px 20px;
   margin-right: 10px;
 }
@@ -1456,6 +1457,8 @@ input[type=number] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .eventlog-filter {
   display: -webkit-box;
@@ -1672,3 +1675,19 @@ tbody {
 /*******************************************************************************
 							FOOTER
 *******************************************************************************/
+.footer-eventlog {
+  margin: 20px;
+}
+
+.diagnostics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
