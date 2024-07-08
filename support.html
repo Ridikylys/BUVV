@@ -30,8 +30,8 @@
 									<li><a href="index.html" class="menu__link ">Состояние</a></li>
 									<li><a href="eventlog.html" class="menu__link">Журнал</a></li>
 									<li><a href="#" class="menu__link">История</a></li>
-									<li><a href="diagnostics.html" class="menu__link menu__link-active">Диагностика</a></li>
-									<li><a href="support.html" class="menu__link">Тех. поддержка</a></li>
+									<li><a href="diagnostics.html" class="menu__link">Диагностика</a></li>
+									<li><a href="support.html" class="menu__link menu__link-active">Тех. поддержка</a></li>
 									<li><a href="#" class="menu__link">О производителе</a></li>
 								</ul>
 							</div>
@@ -39,9 +39,9 @@
 					</div>	
 				</div>
 			</header>
-			<section class="diagnostics">
-				<div class="_container">
-					
+			<section class="support">
+				<div class="_container-support">
+					<img src="/img/PNF.jpg" alt="page_not-found">		
 				</div>
 			</section>
 			<!--Верстаем футер-->
@@ -61,12 +61,40 @@
 		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
 		<script src="js/default.js"></script>
-		<script src="js/highcharts.js"></script>
-		<script src="js/series-label.js"></script>
-		<script src="js/exporting.js"></script>
-		<script src="js/export-data.js"></script>
-		<script src="js/accessibility.js"></script>
-		<script src="js/diagnostics.js"></script>
+		<script >
+			function AppendLogTable(dtevent,mes){
+				let listtable = document.getElementsByClassName("eventlog-table");
+				let table = listtable[0].getElementsByTagName("table").item(0);
+				let body = table.getElementsByTagName("tbody");
+				let newrow =body[0].insertRow(1);
+				let dt = new Date(dtevent);
+				let cell = newrow.insertCell(0)
+				cell.className ="data-column"
+				cell.innerText = dt.toLocaleDateString();
+				cell = newrow.insertCell(1)
+				cell.className ="time-column"
+				cell.innerText = dt.toLocaleTimeString();
+				cell = newrow.insertCell(2)
+				cell.className ="event-column"
+				cell.innerText = mes;
+			}
+			function GetEventsLog(){
+				let dt1 =  Date();
+				AppendLogTable(dt1,"Проверка добавления в таблицу")
+			}
+			/**************
+			let listbuttons = document.getElementsByTagName("button")
+			for (let i = 0; i<listbuttons.length; i++ ) {
+			listbuttons[i].onclick=GetEventsLog;
+			console.log(listbuttons);
+			}*****/
+
+			$('.set-sub-btn').click(function(event) {
+				GetEventsLog();
+				console.log(listbuttons);
+			});
+		</script>
 		
 	</body>
 </html>	
+	
