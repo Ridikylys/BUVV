@@ -1736,7 +1736,7 @@ tbody {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -1746,34 +1746,36 @@ tbody {
   padding: 0px 15px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-}
-@media (max-width: 1182px) {
-  ._container-support {
-    max-width: 970px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /****
+  @media (max-width:1182px) {
+  	max-width: 970px;
   }
-}
-@media (max-width: 992px) {
-  ._container-support {
-    max-width: 750px;
+  @media (max-width:992px) {
+  	max-width: 750px;
   }
-}
-@media (max-width: 767px) {
-  ._container-support {
-    max-width: 550px;
+  @media (max-width:767px) {
+  	max-width: 550px;
   }
-}
-@media (max-width: 570px) {
-  ._container-support {
-    max-width: 380px;
+  @media (max-width:570px) {
+  	max-width: 380px;
   }
-}
-@media (max-width: 397px) {
-  ._container-support {
-    max-width: 320px;
+  @media (max-width:397px) {
+  	max-width: 320px;
   }
-}
-@media (max-width: 360px) {
-  ._container-support {
-    max-width: 270px;
+  @media (max-width:360px) {
+  	max-width: 270px;
   }
+  	*****/
+}
+
+.NTF {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
