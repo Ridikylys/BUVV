@@ -1779,3 +1779,84 @@ tbody {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+/********************************************************************
+				Diagnostik
+********************************************************************/
+.diagnostics-title {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .diagnostics-title {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .diagnostics-title {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .diagnostics-title {
+    font-size: 14px;
+  }
+}
+.diagnostics-legend {
+  text-align: right;
+  margin-right: 5%;
+}
+.diagnostics-filter {
+  height: 200px;
+}
+.diagnostics-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 750px;
+}
+.diagnostics-block-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.diagnostics-block-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 180px;
+}
+.diagnostics-select {
+  margin: 10px;
+  width: 300px;
+  text-transform: uppercase;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+option {
+  text-transform: lowercase;
+  max-height: 50px;
+  overflow-y: auto;
+}
+
+.btn {
+  margin: 0px;
+}

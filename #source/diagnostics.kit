@@ -41,8 +41,51 @@
 			</header>
 			<section class="diagnostics">
 				<div class="_container">
-					
-				</div>
+					<div class="eventlog-container diagnostics-container">
+						<p class="eventlog-title diagnostics-title">Диагностика</p>
+							<fieldset class="eventlog-filter diagnostics-filter">
+								<legend class="diagnostics-legend">Фильтр</legend>
+								<div class="diagnostics-block">
+									<div class="diagnostics-block-left">
+										<select class="diagnostics-select" name="state" id="SelectFile" size="7">
+										<option class="first-value" value="item1">Вариант 1</option>
+										<option value="item2">Вариант 2</option>
+										<option value="item3">Вариант 3</option>
+										<option value="item4">Вариант 4</option>
+										<option value="item5">Вариант 5</option>
+										<option value="item6">Вариант 6</option>
+										<option value="item7">Вариант 7</option>
+										<option value="item8">Вариант 8</option>
+										<option value="item9">Вариант 9</option>
+										<option value="item10">Вариант 10</option>
+										<option value="item11">Вариант 11</option>
+										<option value="item12">Вариант 12</option>
+										<option value="item13">Вариант 13</option>
+										</select>
+									</div>
+									<div class="diagnostics-block-right">
+										<div class="button v8 eventlog-button-submit btn" id='ViewProc'>
+											<span class="label-set-btn"><button type="submit" class="set-sub-btn">Просмотр</button></span>
+											<span class="icon">
+												<span></span>
+											</span>
+										</div>	
+										<div class="button v8 eventlog-button-submit btn" id='DlProc'>
+											<span class="label-set-btn"><button type="submit" class="set-sub-btn">Скачать</button></span>
+											<span class="icon">
+												<span></span>
+											</span>
+										</div>	
+										<div class="button v8 eventlog-button-submit btn" id='ViewList'>
+											<span class="label-set-btn"><button type="submit" class="set-sub-btn">Каталог</button></span>
+											<span class="icon">
+												<span></span>
+											</span>
+										</div>	
+									</div>
+								</div>					
+							</fieldset>
+					</div>
 			</section>
 			<!--Верстаем футер-->
 			<footer class="footer footer-eventlog">
@@ -66,7 +109,5 @@
 		<script src="js/exporting.js"></script>
 		<script src="js/export-data.js"></script>
 		<script src="js/accessibility.js"></script>
-		<script src="js/diagnostics.js"></script>
-		
 	</body>
 </html>	
