@@ -1339,6 +1339,7 @@ input[type="number"] {
 /********************************************************************
 				Diagnostik
 ********************************************************************/
+	
 .diagnostics {
 
 
@@ -1387,6 +1388,9 @@ input[type="number"] {
 		&-left {
 			display: flex;
 			flex-direction: column;
+			//max-height: 100px;
+			justify-content: space-evenly;
+			
 		}
 
 		&-right {
@@ -1395,24 +1399,23 @@ input[type="number"] {
 			justify-content: space-evenly;
 			//align-items: center;
 			height: 180px;
+			margin-right: 30px;
 		}
 	}
 
 	&-select {
+		//display: flex;
 		margin: 10px;
 		width: 300px;
 		//height: 50px;
-		text-transform: uppercase;
-		max-height: 150px;
-		overflow-y: auto;
+		//text-transform: uppercase;
+		padding: 3px;
+		font-family: "Roboto", sans-serif, "PT Serif";
+    	font-size: 14px;
+    	font-weight: 500;
+    	line-height: 15px;
 	}
 
-}
-
-option {
-	text-transform: lowercase;
-	max-height: 50px;
-	overflow-y: auto;
 }
 .first-value {
 	
@@ -1420,3 +1423,49 @@ option {
 .btn {
 	margin: 0px;
 }
+
+//ProgressBar
+
+// variables
+$progress-bar-bg-color: #1da1f2;
+$progress-bar-box-shadow: 2px 14px 15px -7px rgba(30, 166, 250, 0.36);
+$progress-bar-border-radius: 50px;
+$progress-bar-height: 20px;
+$progress-bar-transition-time: 0.5s;
+
+// mixins
+@mixin flex($t, $j, $a) {
+  display: flex;
+  flex-flow: $t nowrap;
+  justify-content: $j;
+  align-items: $a;
+}
+
+// progress bar styles
+.progress-bar {
+  height: 20px;
+  background: $progress-bar-bg-color;
+  box-shadow: $progress-bar-box-shadow;
+  border-radius: $progress-bar-border-radius;
+  transition: all $progress-bar-transition-time;
+}
+
+//custom element style
+.container {
+  width: 300px;
+  height: 20px;
+  @include flex(column, center, center);
+  & h2 {
+    margin-bottom: 20px;
+  }
+  & .progress {
+    width: 300px;
+    height: 200px;
+    @include flex(column, center, start);
+    padding: 10px;
+    background: #e6e9ff;
+    border-radius: 20px;
+    //box-shadow: 0px 10px 50px #abb7e9;
+  }
+}
+
