@@ -1856,6 +1856,10 @@ tbody {
   font-weight: 500;
   line-height: 15px;
 }
+.diagnostics-select > option {
+  overflow-wrap: break-word;
+  display: block;
+}
 
 .btn {
   margin: 0px;

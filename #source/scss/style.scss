@@ -1415,6 +1415,10 @@ input[type="number"] {
     	font-weight: 500;
     	line-height: 15px;
 	}
+	&-select>option {
+		overflow-wrap: break-word;
+		display: block;
+	}
 
 }
 .first-value {
