@@ -1372,10 +1372,25 @@ input[type="number"] {
 	&-legend {
 		text-align: right;
 		margin-right: 5%;
+
+		&-arrows {
+			vertical-align: middle;
+			&-up {
+				display: none;
+			}
+			&Down {
+				display: none;
+
+				&-visible {
+					display: inline;
+					vertical-align: middle;
+				}
+			}
+		}
 	}
 
 	&-filter {
-		height: 200px;
+		height: 225px;
 	}
 
 	&-block {
@@ -1390,6 +1405,12 @@ input[type="number"] {
 			flex-direction: column;
 			//max-height: 100px;
 			justify-content: space-evenly;
+
+			&-title {
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: 400;
+			}
 			
 		}
 
@@ -1398,7 +1419,7 @@ input[type="number"] {
 			flex-direction: column;
 			justify-content: space-evenly;
 			//align-items: center;
-			height: 180px;
+			height: 200px;
 			margin-right: 30px;
 		}
 	}
@@ -1420,6 +1441,29 @@ input[type="number"] {
 		display: block;
 	}
 
+}
+.displaynone {
+	height: 35px;
+	width: 140px;
+	border: none;
+	position: relative;
+	right: -197%;
+	border: 2px solid #007397;
+
+}
+
+.displaynone2 {
+	display: none;
+}
+
+.displaynone3 {
+	img {
+		display: none;
+	}
+}
+
+.filter-link {
+	color: #000;
 }
 .first-value {
 	

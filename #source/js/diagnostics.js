@@ -2,6 +2,16 @@
  * (class)Progress<nowValue, minValue, maxValue>
  */
 
+
+$('.diagnostics-legend').click(function(event) {
+	$('.diagnostics-legend-arrows').toggleClass('diagnostics-legend-arrows-up');
+	$('.diagnostics-legend-arrowsDown').toggleClass('diagnostics-legend-arrowsDown-visible');
+	$('.diagnostics-block').toggleClass('displaynone2');
+	$('.diagnostics-filter').toggleClass('displaynone');
+	
+});
+
+
 //helper function-> return <DOMelement>
 function elt(type, prop, ...childrens) {
 	let elem = document.createElement(type);

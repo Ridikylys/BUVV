@@ -1809,8 +1809,21 @@ tbody {
   text-align: right;
   margin-right: 5%;
 }
+.diagnostics-legend-arrows {
+  vertical-align: middle;
+}
+.diagnostics-legend-arrows-up {
+  display: none;
+}
+.diagnostics-legend-arrowsDown {
+  display: none;
+}
+.diagnostics-legend-arrowsDown-visible {
+  display: inline;
+  vertical-align: middle;
+}
 .diagnostics-filter {
-  height: 200px;
+  height: 225px;
 }
 .diagnostics-block {
   display: -webkit-box;
@@ -1833,6 +1846,11 @@ tbody {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+.diagnostics-block-left-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
 .diagnostics-block-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1844,7 +1862,7 @@ tbody {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 180px;
+  height: 200px;
   margin-right: 30px;
 }
 .diagnostics-select {
@@ -1859,6 +1877,27 @@ tbody {
 .diagnostics-select > option {
   overflow-wrap: break-word;
   display: block;
+}
+
+.displaynone {
+  height: 35px;
+  width: 140px;
+  border: none;
+  position: relative;
+  right: -197%;
+  border: 2px solid #007397;
+}
+
+.displaynone2 {
+  display: none;
+}
+
+.displaynone3 img {
+  display: none;
+}
+
+.filter-link {
+  color: #000;
 }
 
 .btn {
