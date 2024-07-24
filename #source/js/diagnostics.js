@@ -21,7 +21,7 @@ function elt(type, prop, ...childrens) {
 	  else elem.appendChild(elem);
 	}
 	return elem;
-  }
+	}
   
   //Progress class
   class Progress {
@@ -65,7 +65,7 @@ function elt(type, prop, ...childrens) {
 	  this.intervalCode = 0;
 	  this.syncState();
 	}
-  }
+}
   
   
   let pb = new Progress(15, 0, 100, {parent : ".progress"});
@@ -78,3 +78,100 @@ function elt(type, prop, ...childrens) {
   setTimeout( () => {
 	pb.end()
   }, 5000)
+
+if(document.getElementById('chart-UEM') != null){
+	var chartUEM = new Highcharts.Chart('chart-UEM',{
+	
+	title: { text: 'Напряжения электромагнита' },
+	series: [
+		{
+			name:'Напряжение входное',
+			color:'MediumPurple',
+			visible:true,
+			showInLegend: true,
+			data: []
+		},
+		{
+			name:'Напряжение питания ключей',
+			color:'Fuchsia',
+			visible:true,
+			showInLegend: true,
+			data: []
+		},
+		{
+			name:'Напряжение EM1',
+			color:'OrangeRed',
+			visible:true,
+			showInLegend: true,
+			data: []
+		},
+		{
+			name:'Напряжение EM2',
+			color:'Coral',
+			visible:true,
+			showInLegend: true,
+			data: []
+		}
+	],
+	tooltip: {
+		valueDecimals: 1
+	},
+	plotOptions: {
+		line: { animation: false,
+			dataLabels: { 
+				enabled: false,
+				format: '{point.y:,.1f}'						
+			}
+		},
+		series: { color: '#059e8a' }
+	},
+	xAxis: { type: 'datetime',
+		dateTimeLabelFormats: { second: '%H:%M:%S' }
+	},
+	yAxis: {
+		title: { text: 'Напряжение  (В)' }
+		//title: { text: 'Temperature (Fahrenheit)' }
+	},
+	credits: { enabled: false }
+	});
+}
+
+if(document.getElementById('chart-iem') != null){
+	var chartIEM = new Highcharts.Chart('chart-iem',{
+	title: { text: 'Ток  электромагнита' },
+	legend: {
+		layout: 'horizontal',
+		align: 'center',
+		verticalAlign: 'bottom'
+	},
+	series: [
+		{
+			name:'Ток <br> электромагнита <br>',
+			color:'blue',
+			visible:true,
+			showInLegend: true,
+			data: []
+		}
+	],
+	tooltip: {
+		valueDecimals: 1
+	},
+	plotOptions: {
+		line: { animation: true,
+			dataLabels: { 
+				enabled: false,
+				format: '{point.y:,.1f}'					
+			}
+		},
+		series: { color: '#059e8a', pointStart: 1 }
+		
+	},
+	xAxis: { type: 'datetime',
+		dateTimeLabelFormats: { second: '%H:%M:%S' }
+	},
+	yAxis: {
+		title: { text: 'Ток (А)' }
+	},
+	credits: { enabled: false }
+	})
+}
