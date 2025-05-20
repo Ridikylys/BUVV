@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>РЭ БПВВ</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<link rel="stylesheet" href="css/pre-style.css">
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="img/site_logo.ico">
+	</head>
+	
+	<body>
+		<!--Оболочка всей страницы-->
+		<!--Используется как флекс-контейнер, чтобы разнести футер и контент-->
+		<div class="wrapper">
+			<main class="page">
+				<!--Подключаем хедер обязательно в коментарии-->
+				<header class="header">
+					<div class="_container">
+						<div class="header__row">
+							<div class="header__logo">
+								<a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+							</div>
+							<nav class="header__menu menu">
+								<!--Под бургер меню-->
+								<div class="menu__icon icon-menu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div class="menu__body">
+									<ul class="menu__list">
+										<li><a href="index.html" class="menu__link">Состояние</a></li>
+										<li><a href="eventlog.html" class="menu__link">Журнал</a></li>
+										<li><a href="history.html" class="menu__link">История</a></li>
+										<li><a href="diagnostics.html" class="menu__link">Диагностика</a></li>
+										<li><a href="support.html" class="menu__link menu__link-active">Тех. поддержка</a></li>
+										<li><a href="aboutus.html" class="menu__link">О производителе</a></li>
+									</ul>
+								</div>
+							</nav>
+						</div>	
+					</div>
+				</header>
+
+				<!--БЛОК СОСТОЯНИЯ-->
+				<section class="BPVVRU">
+				<!--<div class="_container">-->
+						<div class="pdf-container">
+							<!--<object data="/content/RE_BPVV.pdf#view=Fit" type="application/pdf" width="100%" height="100%">
+							<p><b>Упс! Кажется, PDF-файл не отобразился.</b> Попробуйте скачать его <a href="/content/RE_BPVV.pdf">отсюда</a>.</p>
+							</object>-->
+							
+							<iframe src="/content/RE_BPVV.pdf#toolbar=0" loading = «lazy» width="100%" height="100%" style="border: none;" allow="fullscreen" ></iframe>
+						</div>
+						<!--
+						<h3>ООО «ФПГ «ДОНПРОМЭНЕРГО»</h3>
+						<h1>БЛОК ПИТАНИЯ БПВВ-1 (BP-220-02A)</h1>
+						<h2>РУКОВОДСТВО ПО ЭКСПЛУАТАЦИИ</h2>
+						<img class="BPVVRU__img1" src="../BUVV/img/BPVV_image.png" alt="">
+						<p>г. Ростов-на-Дону</p>
+						<p>2023 г.</p>
+						-->
+
+					<!--</div>-->
+				</section>
+				<!--Верстаем футер-->
+				<footer class="footer">
+					<div class="_container">
+						<div class="footer__row">
+							<div class="footer__copy">БУВВ-1 (BU-220-05A)
+							</div>
+							<div class="footer__sections">
+								ВСЕ ПРАВА ЗАЩИЩЕНЫ	
+							</div>
+						</div>
+					</div>
+				</footer>
+			</main>
+		</div>
+		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
+		<script src="js/default.js"></script>
+		
+	</body>
+</html>	
