@@ -1675,7 +1675,7 @@ h2 {
 .pdf-container {
 	width: 100%; /* или конкретное значение, например, 800px */
 //	max-width: 850px; /* Максимальная ширина для лучшей читаемости */
-height: 78vh; /* Задайте нужную высоту */
+height: 80vh; /* Задайте нужную высоту */
 overflow-y: hidden;
 //	border: none;
 //	margin: 20px auto; /* Центрирование и отступы */
@@ -1692,4 +1692,9 @@ overflow-y: hidden;
   border: none;
   background-color: #fff;
   overflow: hidden;
+}
+
+#pdfIframe {
+    border: none;  /* Убираем рамку */
+    background-color: white; /* Фон iframe, если нужно*/
 }
