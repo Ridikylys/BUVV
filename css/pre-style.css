@@ -156,11 +156,23 @@ body {
   line-height: 15px;
   background-color: #ffffff;
 }
+body-settings {
+  overflow-y: hidden;
+}
 
-.wrapper {
+.wrapper-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
   overflow: hidden;
 }
-.wrapper-settings {
+
+.page-settings {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1771,26 +1783,36 @@ tbody {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /****
-  @media (max-width:1182px) {
-  	max-width: 970px;
+}
+@media (max-width: 1182px) {
+  ._container-support {
+    max-width: 970px;
   }
-  @media (max-width:992px) {
-  	max-width: 750px;
+}
+@media (max-width: 992px) {
+  ._container-support {
+    max-width: 750px;
   }
-  @media (max-width:767px) {
-  	max-width: 550px;
+}
+@media (max-width: 767px) {
+  ._container-support {
+    max-width: 550px;
   }
-  @media (max-width:570px) {
-  	max-width: 380px;
+}
+@media (max-width: 570px) {
+  ._container-support {
+    max-width: 380px;
   }
-  @media (max-width:397px) {
-  	max-width: 320px;
+}
+@media (max-width: 397px) {
+  ._container-support {
+    max-width: 320px;
   }
-  @media (max-width:360px) {
-  	max-width: 270px;
+}
+@media (max-width: 360px) {
+  ._container-support {
+    max-width: 270px;
   }
-  	*****/
 }
 
 .NTF {
@@ -2138,48 +2160,75 @@ tbody {
           justify-content: center;
   overflow-y: hidden;
   overflow-x: hidden;
-  text-align: center;
-}
-.BPVVRU__img1 {
-  width: 70%;
 }
 
-h3 {
-  font-size: 16px;
-  margin: 2vw 0 7vw 0;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 20px;
-  margin: 0vw 0 7vw 0;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 18px;
-  margin: 0vw 0 7vw 0;
-}
-
-.pdf-container {
-  width: 100%; /* или конкретное значение, например, 800px */
-  height: 80vh; /* Задайте нужную высоту */
-  overflow-y: hidden;
-}
-
-.pdf-container iframe {
+.elPDF {
+  display: block;
   position: relative;
+  width: 100%; /*Рассчитать ширину и высоту под пропорции страницы*/
+  height: 80vh; /*Рассчитать ширину и высоту под пропорции страницы*/
+  overflow: hidden; /*Убрать скроллбары*/
   z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: #fff;
-  overflow: hidden;
+  /*...
+  Прочая стилизация iframe (позиционирование, рамки и т.д.)
+  ...*/
 }
 
-#pdfIframe {
-  border: none; /* Убираем рамку */
-  background-color: white; /* Фон iframe, если нужно*/
+.BlockForPDFpages__CL {
+  width: 1200px;
+}
+
+.support-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1300px;
+}
+.support-block-title {
+  margin: 10px;
+}
+@media (max-width: 360px) {
+  .support-block-title {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+.BP-fl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.BU-fl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1170px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33, 333%;
+          flex: 1 1 33, 333%;
+}
+
+.support-container {
+  width: 1300px;
+  max-width: 1300px;
 }

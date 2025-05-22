@@ -39,15 +39,20 @@ body {
 	font-weight: 500;
 	line-height: 15px;
 	background-color: #ffffff;
+		&-settings {
+			overflow-y: hidden;
+		}
 }
 
 .wrapper {
-	overflow: hidden;
+	//overflow: hidden;
+	//min-height: 100%;
 	&-settings {
 		display: flex;
 		flex-direction: column;
 		min-height: 100%;
 		overflow: hidden;
+		
 	}
 	
 }
@@ -58,9 +63,14 @@ body {
 	//flex-direction: column;
 	
 	&-settings {
-		//display: flex;
-		//flex-direction: column;
-		//min-height: 100%;
+		
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		overflow: hidden;
+		
+		
+		//margin: 0 auto;
 	}
 }
 //-----------Технический класс для изображений бэкграунда--------
@@ -1313,7 +1323,7 @@ input[type="number"] {
 	box-sizing: content-box;
 	display: flex;
 	justify-content: center;
-	/****
+	//тут не уверен по поводу адаптива. раскоментил для ПДФ БПВВ в техподержке. 
 	@media (max-width:1182px) {
 		max-width: 970px;
 	}
@@ -1332,7 +1342,7 @@ input[type="number"] {
 	@media (max-width:360px) {
 		max-width: 270px;
 	}
-		*****/
+		
 }
 
 .NTF {
@@ -1648,53 +1658,70 @@ $progress-bar-transition-time: 0.5s;
 	justify-content: center;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	text-align: center;
-	
-		&__img1 {
-			width: 70%;
+}
+
+.elPDF {
+		display: block;
+		position: relative;
+		width: 100%; /*Рассчитать ширину и высоту под пропорции страницы*/
+
+		height: 80vh; /*Рассчитать ширину и высоту под пропорции страницы*/
+		overflow: hidden; /*Убрать скроллбары*/
+		z-index: 0;
+		/*...
+		Прочая стилизация iframe (позиционирование, рамки и т.д.)
+		...*/
+		
+}
+
+.BlockForPDFpages__CL {
+	width: 1200px;
+}
+
+.support-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 1300px;
+
+	&-title {
+		margin: 10px;
+		@media (max-width:360px) {
+			margin: 0px;
+			padding: 0px;
 		}
+		
+		&__text {
+
+		}
+	}
 }
 
-h3 {
-	font-size: 16px;
-	margin: 2vw 0 7vw 0;
-	font-weight: 600;
+.support-block-fl {
+}
+.support-block-fl-BP {
+}
+.BP-fl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.BP-fl-text {
 }
 
-h1 {
-	font-size: 20px;
-	margin: 0vw 0 7vw 0;
-	font-weight: 600;
+.support-block-fl-BU {
+}
+.BU-fl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1170px;
+	flex: 1 1 33,333%;
+}
+.BU-fl-text {
 }
 
-h2 {
-	font-size: 18px;
-	margin: 0vw 0 7vw 0;
-}
-
-.pdf-container {
-	width: 100%; /* или конкретное значение, например, 800px */
-//	max-width: 850px; /* Максимальная ширина для лучшей читаемости */
-height: 80vh; /* Задайте нужную высоту */
-overflow-y: hidden;
-//	border: none;
-//	margin: 20px auto; /* Центрирование и отступы */
-}
-
-
-.pdf-container iframe {
-  position: relative;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-#pdfIframe {
-    border: none;  /* Убираем рамку */
-    background-color: white; /* Фон iframe, если нужно*/
+.support-container {
+	width: 1300px;
+	max-width: 1300px;
 }
