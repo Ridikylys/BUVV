@@ -1314,6 +1314,7 @@ input[type="number"] {
 	justify-content: center;
 	overflow-y: hidden;
 	overflow-x: hidden;
+	flex-direction: column;
 }
 
 ._container-support{
@@ -1678,19 +1679,21 @@ $progress-bar-transition-time: 0.5s;
 	width: 1200px;
 }
 
+/**********Визуал страницы тех. поддержки **********/
 .support-block {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	width: 1300px;
+	width: 750px;
+    align-items: normal;
+	
 
 	&-title {
-		margin: 10px;
+		margin: 25px;
 		@media (max-width:360px) {
 			margin: 0px;
 			padding: 0px;
 		}
-		
+
 		&__text {
 
 		}
@@ -1698,13 +1701,23 @@ $progress-bar-transition-time: 0.5s;
 }
 
 .support-block-fl {
+	&__line {
+		content: "";
+		height: 2px;
+		width: 102%;
+		position: relative;
+		display: block;
+		background: #007397;
+		top: -20%;
+	}
 }
 .support-block-fl-BP {
+	padding-bottom: 35px;
 }
 .BP-fl {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 }
 .BP-fl-text {
 }
@@ -1715,13 +1728,15 @@ $progress-bar-transition-time: 0.5s;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 1170px;
-	flex: 1 1 33,333%;
+	
+	
 }
 .BU-fl-text {
+
 }
 
 .support-container {
-	width: 1300px;
-	max-width: 1300px;
+	flex: 1 1 auto;
+	justify-content: start;
+	width: 1170px;
 }
