@@ -1690,6 +1690,12 @@ $progress-bar-transition-time: 0.5s;
 	@media (max-width:767px) {
 		width: 550px;
 	}
+
+	@media (max-width:570px) {
+		width: 250px;
+		margin: 0 auto;
+		padding-bottom: 15px;
+	}
 	
 
 	&-title {
@@ -1715,15 +1721,29 @@ $progress-bar-transition-time: 0.5s;
 }
 .support-block-fl-BP {
 	padding-bottom: 35px;
+	@media (max-width:767px) {
+		padding-bottom: 25px;
+	}
 }
 .BP-fl {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@media (max-width:570px) {
+		flex-wrap: wrap;
+	}
 }
 .BP-fl-text {
 	@media (max-width:767px) {
 		width: 210px;
+	}
+	@media (max-width:570px) {
+		width: 210px;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 5px;
+		line-height: 20px;
 	}
 }
 
@@ -1733,12 +1753,21 @@ $progress-bar-transition-time: 0.5s;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media (max-width:570px) {
+		flex-wrap: wrap;
+	}
 	
 	
 }
 .BU-fl-text {
 	@media (max-width:767px) {
 		width: 210px;
+	}
+	@media (max-width:570px) {
+		text-align: center;
+        margin: 0 auto;
+        padding-bottom: 5px;
+		line-height: 20px;
 	}
 }
 
@@ -1775,6 +1804,12 @@ $progress-bar-transition-time: 0.5s;
 
 		@media (max-width:992px) {
 		text-align: center;
+		}
+
+		&-text {
+			@media (max-width:570px) {
+				line-height: 150%;
+			}
 		}
 
 		&-info {
