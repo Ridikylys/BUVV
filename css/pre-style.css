@@ -2228,6 +2228,17 @@ tbody {
     margin: 0;
   }
 }
+@media (max-width: 450px) {
+  .support-block-title__text {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .support-block-title__text {
+    font-size: 12px;
+  }
+}
 
 .support-block-fl-BP {
   padding-bottom: 35px;
@@ -2273,6 +2284,11 @@ tbody {
     line-height: 20px;
   }
 }
+@media (max-width: 420px) {
+  .BP-fl-text {
+    font-size: 10px;
+  }
+}
 
 .BU-fl {
   display: -webkit-box;
@@ -2303,6 +2319,11 @@ tbody {
     margin: 0 auto;
     padding-bottom: 5px;
     line-height: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .BU-fl-text {
+    font-size: 10px;
   }
 }
 
@@ -2353,32 +2374,6 @@ tbody {
     text-align: center;
   }
 }
-@media (max-width: 570px) {
-  .support-block-fl__dev-text {
-    line-height: 150%;
-  }
-}
-.support-block-fl__dev-info-tel {
-  color: #000;
-  text-decoration: underline;
-}
-.support-block-fl__dev-info-mail {
-  color: #000;
-  text-decoration: underline;
-}
-.support-block-fl__dev-title {
-  text-align: right;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 1%;
-}
-@media (max-width: 992px) {
-  .support-block-fl__dev-title {
-    text-align: center;
-  }
-}
 .support-block-fl__dev-text {
   text-align: justify;
   -moz-text-align-last: right;
@@ -2396,6 +2391,52 @@ tbody {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 570px) {
+  .support-block-fl__dev-text {
+    line-height: 150%;
+  }
+}
+@media (max-width: 420px) {
+  .support-block-fl__dev-text {
+    font-size: 10px;
+  }
+}
+.support-block-fl__dev-info-tel {
+  color: #000;
+  text-decoration: underline;
+}
+.support-block-fl__dev-info-mail {
+  color: #000;
+  text-decoration: underline;
+}
+@media (max-width: 420px) {
+  .support-block-fl__dev-info {
+    font-size: 10px;
+  }
+}
+.support-block-fl__dev-title {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1%;
+}
+@media (max-width: 992px) {
+  .support-block-fl__dev-title {
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .support-block-fl__dev-title {
+    font-size: 12px;
+  }
+}
 .support-block-fl__dev-contact {
   font-weight: 600;
+}
+@media (max-width: 420px) {
+  .support-block-fl__dev-contact {
+    font-size: 10px;
+  }
 }
