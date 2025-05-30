@@ -1878,3 +1878,62 @@ $progress-bar-transition-time: 0.5s;
 	}
 
 }
+
+.about-us {
+
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: center;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	flex-direction: column;
+	width: 1170px;
+	margin: 0 auto;
+
+	&-background {
+		background-image: url('/img/aboutuspng.svg');
+  		background-size: cover;
+		position: fixed;
+		right: 0;
+		top: 0;
+		//width: 1110px;
+		height: 845px;
+		min-width: 100%;
+	}
+
+	&-main {
+
+
+		display: flex;
+		justify-content: space-evenly;
+		font-family: "Montserrat","PT Serif",sans-serif;
+
+		&-left {
+
+			&-title {
+
+			}
+
+			&-suptitle {
+
+			}
+
+			&-text {
+
+			}
+		}
+
+		&-right {
+
+
+			&-text {
+
+			}
+		}
+
+	}
+
+
+}
+
+

@@ -2440,3 +2440,41 @@ tbody {
     font-size: 10px;
   }
 }
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1170px;
+  margin: 0 auto;
+}
+.about-us-background {
+  background-image: url("/img/aboutuspng.svg");
+  background-size: cover;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 845px;
+  min-width: 100%;
+}
+.about-us-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-family: "Montserrat", "PT Serif", sans-serif;
+}
