@@ -1883,22 +1883,22 @@ $progress-bar-transition-time: 0.5s;
 
 	display: flex;
 	flex: 1 1 auto;
-	justify-content: center;
 	overflow-y: hidden;
 	overflow-x: hidden;
 	flex-direction: column;
-	width: 1170px;
+	max-width: 1170px;
 	margin: 0 auto;
 
 	&-background {
 		background-image: url('/img/aboutuspng.svg');
-  		background-size: cover;
+  		background-size: contain;
 		position: fixed;
 		right: 0;
 		top: 0;
 		//width: 1110px;
 		height: 845px;
 		min-width: 100%;
+		background-repeat: no-repeat;
 	}
 
 	&-main {
@@ -1907,15 +1907,25 @@ $progress-bar-transition-time: 0.5s;
 		display: flex;
 		justify-content: space-evenly;
 		font-family: "Montserrat","PT Serif",sans-serif;
+		color: #000000;
+
 
 		&-left {
 
-			&-title {
+			flex: 1 1 80%;
 
+			&-title {
+				font-weight: 700;
+				font-size: 40px;
+				line-height: 120%;
+				display: inline-block;
 			}
 
 			&-suptitle {
-
+				font-weight: 400;
+				font-size: 36px;
+				line-height: 36px;
+				display: inline-block;
 			}
 
 			&-text {
@@ -1925,6 +1935,7 @@ $progress-bar-transition-time: 0.5s;
 
 		&-right {
 
+			flex: 1 1 20%;
 
 			&-text {
 

@@ -2448,26 +2448,24 @@ tbody {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow-y: hidden;
   overflow-x: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 .about-us-background {
   background-image: url("/img/aboutuspng.svg");
-  background-size: cover;
+  background-size: contain;
   position: fixed;
   right: 0;
   top: 0;
   height: 845px;
   min-width: 100%;
+  background-repeat: no-repeat;
 }
 .about-us-main {
   display: -webkit-box;
@@ -2477,4 +2475,27 @@ tbody {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   font-family: "Montserrat", "PT Serif", sans-serif;
+  color: #000000;
+}
+.about-us-main-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+}
+.about-us-main-left-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  display: inline-block;
+}
+.about-us-main-left-suptitle {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  display: inline-block;
+}
+.about-us-main-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
 }
