@@ -1893,11 +1893,11 @@ $progress-bar-transition-time: 0.5s;
 		background-image: url('/img/aboutuspng.svg');
   		background-size: contain;
 		position: fixed;
-		right: 0;
-		top: 0;
+		right: -15%;
+    	top: 5%;
 		//width: 1110px;
 		height: 845px;
-		min-width: 100%;
+		min-width: 75%;
 		background-repeat: no-repeat;
 	}
 
