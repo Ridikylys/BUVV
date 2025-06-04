@@ -2464,8 +2464,16 @@ tbody {
   right: -15%;
   top: 5%;
   height: 845px;
-  min-width: 75%;
+  min-width: 70%;
   background-repeat: no-repeat;
+}
+.about-us-background-firstline {
+  height: 2px;
+  width: 840px;
+  position: relative;
+  top: -8px;
+  background-color: gray;
+  z-index: 0;
 }
 .about-us-main {
   display: -webkit-box;
@@ -2481,21 +2489,53 @@ tbody {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 80%;
           flex: 1 1 80%;
+  margin-top: -50px;
+}
+.about-us-main-left-logo {
+  background-image: url(/img/FPG_Logo.svg);
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  left: 0%;
+  top: 26%;
+  height: 149px;
+  min-width: 75%;
+  background-repeat: no-repeat;
 }
 .about-us-main-left-title {
   font-weight: 700;
   font-size: 40px;
   line-height: 120%;
   display: inline-block;
+  padding: 0px 10px 15px 160px;
 }
 .about-us-main-left-suptitle {
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  display: inline-block;
+  display: contents;
+  font-family: "Roboto";
+  color: #b69e5e;
+  padding-left: 5px;
+}
+.about-us-main-left-text {
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 200%;
+  margin-left: 29%;
 }
 .about-us-main-right {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20%;
-          flex: 1 1 20%;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+}
+.about-us-main-right-text {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 150%;
+  color: #14243a;
+  margin-top: 270px;
+}
+.about-us-about {
+  font-weight: 600;
 }
