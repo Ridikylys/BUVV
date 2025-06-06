@@ -2475,6 +2475,11 @@ tbody {
   background-color: gray;
   z-index: 0;
 }
+@media (max-width: 1182px) {
+  .about-us-background-firstline {
+    top: 1px;
+  }
+}
 .about-us-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2485,11 +2490,29 @@ tbody {
   font-family: "Montserrat", "PT Serif", sans-serif;
   color: #000000;
 }
+@media (max-width: 1182px) {
+  .about-us-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .about-us-main {
+    max-width: 750px;
+  }
+}
 .about-us-main-left {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 80%;
           flex: 1 1 80%;
   margin-top: -50px;
+}
+@media (max-width: 1182px) {
+  .about-us-main-left {
+    margin-top: 0px;
+  }
 }
 .about-us-main-left-logo {
   background-image: url(/img/FPG_Logo.svg);
@@ -2502,12 +2525,36 @@ tbody {
   min-width: 75%;
   background-repeat: no-repeat;
 }
+@media (max-width: 1182px) {
+  .about-us-main-left-logo {
+    min-width: 15%;
+    display: inline-block;
+    top: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .about-us-main-left-logo {
+    min-width: 20%;
+    top: 134px;
+  }
+}
 .about-us-main-left-title {
   font-weight: 700;
   font-size: 40px;
   line-height: 120%;
   display: inline-block;
   padding: 0px 10px 15px 160px;
+}
+@media (max-width: 1182px) {
+  .about-us-main-left-title {
+    padding: 0;
+  }
+}
+@media (max-width: 992px) {
+  .about-us-main-left-title {
+    display: block;
+    padding-left: 22%;
+  }
 }
 .about-us-main-left-suptitle {
   font-weight: 400;
@@ -2517,6 +2564,12 @@ tbody {
   font-family: "Roboto";
   color: #b69e5e;
   padding-left: 5px;
+}
+@media (max-width: 992px) {
+  .about-us-main-left-suptitle {
+    display: block;
+    padding-left: 22%;
+  }
 }
 .about-us-main-left-text {
   max-width: 560px;
@@ -2529,13 +2582,39 @@ tbody {
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
 }
+@media (max-width: 1182px) {
+  .about-us-main-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
 .about-us-main-right-text {
   font-weight: 600;
   font-size: 17px;
   line-height: 150%;
   color: #14243a;
-  margin-top: 270px;
+  margin-top: 300px;
+}
+@media (max-width: 1182px) {
+  .about-us-main-right-text {
+    margin-top: 3%;
+    max-width: 338px;
+    text-align: justify;
+  }
 }
 .about-us-about {
   font-weight: 600;
+  margin-top: 30px;
 }
+
+/**************@media (max-width:1182px) {
+		max-width: 970px;
+	}
+	@media (max-width:992px) {
+		max-width: 750px;
+	}
+***********************/

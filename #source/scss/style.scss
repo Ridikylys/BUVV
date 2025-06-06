@@ -1907,6 +1907,9 @@ $progress-bar-transition-time: 0.5s;
 			top: -8px;
 			background-color: gray;
 			z-index: 0;
+			@media (max-width:1182px) {
+				top: 1px;
+			}
 		}
 	}
 
@@ -1918,11 +1921,21 @@ $progress-bar-transition-time: 0.5s;
 		font-family: "Montserrat","PT Serif",sans-serif;
 		color: #000000;
 
+		@media (max-width:1182px) {
+		flex-direction: column;
+		}
+		@media (max-width:992px) {
+			max-width: 750px;
+		}
+
 
 		&-left {
 
 			flex: 1 1 80%;
 			margin-top: -50px;
+			@media (max-width:1182px) {
+				margin-top: 0px;
+			}
 
 			&-logo {
 				background-image: url(/img/FPG_Logo.svg);
@@ -1934,6 +1947,15 @@ $progress-bar-transition-time: 0.5s;
 				height: 149px;
 				min-width: 75%;
 				background-repeat: no-repeat;
+				@media (max-width:1182px) {
+					min-width: 15%;
+					display: inline-block;
+					top: 80px;
+				}
+				@media (max-width:992px) {
+					min-width: 20%;
+					top: 134px;
+				}
 
 			}
 
@@ -1943,6 +1965,13 @@ $progress-bar-transition-time: 0.5s;
 				line-height: 120%;
 				display: inline-block;
 				padding: 0px 10px 15px 160px;
+				@media (max-width:1182px) {
+					padding: 0;
+				}
+				@media (max-width:992px) {
+					display: block;
+					padding-left: 22%;
+				}
 
 			}
 
@@ -1954,12 +1983,15 @@ $progress-bar-transition-time: 0.5s;
 				font-family: 'Roboto';
 				color: #b69e5e;
 				padding-left: 5px;
+				@media (max-width:992px) {
+					display: block;
+					padding-left: 22%;
+				}
 				
 			}
 
 			&-text {
 				max-width: 560px;
-				
 				font-size: 18px;
 				line-height: 200%;	
 				margin-left: 29%;
@@ -1969,13 +2001,22 @@ $progress-bar-transition-time: 0.5s;
 		&-right {
 
 			flex: 1 1 30%;
+			@media (max-width:1182px) {
+				display: flex;
+    			justify-content: end;
+			}
 
 			&-text {
 				font-weight: 600;
 				font-size: 17px;
 				line-height: 150%;
 				color: #14243a;
-				margin-top: 270px;
+				margin-top: 300px;
+				@media (max-width:1182px) {
+					margin-top: 3%;
+					max-width: 338px;
+        			text-align: justify;
+				}
 			}
 		}
 
@@ -1983,9 +2024,17 @@ $progress-bar-transition-time: 0.5s;
 
 	&-about {
 		font-weight: 600;
+		margin-top: 30px;
 	}
 
 
 }
 
+/**************@media (max-width:1182px) {
+		max-width: 970px;
+	}
+	@media (max-width:992px) {
+		max-width: 750px;
+	}
+***********************/
 
