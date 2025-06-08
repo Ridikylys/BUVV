@@ -2480,6 +2480,13 @@ tbody {
     top: 1px;
   }
 }
+@media (max-width: 992px) {
+  .about-us-background-firstline {
+    left: -28%;
+    width: 750px;
+    margin-top: 1%;
+  }
+}
 .about-us-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2514,13 +2521,18 @@ tbody {
     margin-top: 0px;
   }
 }
+@media (max-width: 992px) {
+  .about-us-main-left {
+    margin-top: -130px;
+  }
+}
 .about-us-main-left-logo {
   background-image: url(/img/FPG_Logo.svg);
   background-size: contain;
   position: relative;
   z-index: 1;
   left: 0%;
-  top: 26%;
+  top: 22%;
   height: 149px;
   min-width: 75%;
   background-repeat: no-repeat;
@@ -2529,13 +2541,13 @@ tbody {
   .about-us-main-left-logo {
     min-width: 15%;
     display: inline-block;
-    top: 80px;
+    top: 75px;
   }
 }
 @media (max-width: 992px) {
   .about-us-main-left-logo {
     min-width: 20%;
-    top: 134px;
+    top: 140px;
   }
 }
 .about-us-main-left-title {
@@ -2577,6 +2589,13 @@ tbody {
   line-height: 200%;
   margin-left: 29%;
 }
+@media (max-width: 992px) {
+  .about-us-main-left-text {
+    max-width: 480px;
+    margin-left: 1%;
+    margin-top: 7%;
+  }
+}
 .about-us-main-right {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30%;
@@ -2590,6 +2609,15 @@ tbody {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
+  }
+}
+@media (max-width: 992px) {
+  .about-us-main-right {
+    left: 25%;
+    position: relative;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
 }
 .about-us-main-right-text {
@@ -2609,6 +2637,12 @@ tbody {
 .about-us-about {
   font-weight: 600;
   margin-top: 30px;
+}
+@media (max-width: 992px) {
+  .about-us-support {
+    text-align: end;
+    max-width: 992px;
+  }
 }
 
 /**************@media (max-width:1182px) {

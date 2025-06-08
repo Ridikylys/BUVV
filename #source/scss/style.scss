@@ -1910,6 +1910,11 @@ $progress-bar-transition-time: 0.5s;
 			@media (max-width:1182px) {
 				top: 1px;
 			}
+			@media (max-width:992px) {
+				left: -28%;
+				width: 750px;
+				margin-top: 1%;
+			}
 		}
 	}
 
@@ -1936,6 +1941,9 @@ $progress-bar-transition-time: 0.5s;
 			@media (max-width:1182px) {
 				margin-top: 0px;
 			}
+			@media (max-width:992px) {
+				margin-top: -130px;
+			}
 
 			&-logo {
 				background-image: url(/img/FPG_Logo.svg);
@@ -1943,18 +1951,18 @@ $progress-bar-transition-time: 0.5s;
 				position: relative;
 				z-index: 1;
 				left: 0%;
-				top: 26%;
+				top: 22%;
 				height: 149px;
 				min-width: 75%;
 				background-repeat: no-repeat;
 				@media (max-width:1182px) {
 					min-width: 15%;
 					display: inline-block;
-					top: 80px;
+					top: 75px;
 				}
 				@media (max-width:992px) {
 					min-width: 20%;
-					top: 134px;
+					top: 140px;
 				}
 
 			}
@@ -1995,6 +2003,11 @@ $progress-bar-transition-time: 0.5s;
 				font-size: 18px;
 				line-height: 200%;	
 				margin-left: 29%;
+				@media (max-width:992px) {
+					max-width: 480px;
+					margin-left: 1%;
+					margin-top: 7%;
+				}
 			}
 		}
 
@@ -2004,6 +2017,11 @@ $progress-bar-transition-time: 0.5s;
 			@media (max-width:1182px) {
 				display: flex;
     			justify-content: end;
+			}
+			@media (max-width:992px) {
+				left: 25%;
+        		position: relative;
+				justify-content: unset;
 			}
 
 			&-text {
@@ -2025,6 +2043,13 @@ $progress-bar-transition-time: 0.5s;
 	&-about {
 		font-weight: 600;
 		margin-top: 30px;
+	}
+
+	&-support {
+		@media (max-width:992px) {
+			text-align: end;
+       		max-width: 992px;
+		}
 	}
 
 
