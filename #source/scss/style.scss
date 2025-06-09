@@ -1913,8 +1913,19 @@ $progress-bar-transition-time: 0.5s;
 			@media (max-width:992px) {
 				left: -28%;
 				width: 750px;
-				margin-top: 1%;
+				margin-top: -8%;
 			}
+			@media (max-width:767px) {
+				margin-top: -10%;
+				width: 550px;
+			}
+			@media (max-width:570px) {
+				margin-top: -16%;
+				left: -45%;
+				width: 390px;
+			}
+
+
 		}
 	}
 
@@ -1964,6 +1975,9 @@ $progress-bar-transition-time: 0.5s;
 					min-width: 20%;
 					top: 140px;
 				}
+				@media (max-width:570px) {
+					min-width: 30%;
+				}
 
 			}
 
@@ -1979,6 +1993,15 @@ $progress-bar-transition-time: 0.5s;
 				@media (max-width:992px) {
 					display: block;
 					padding-left: 22%;
+					margin-top: 1%;
+				}
+				@media (max-width:767px) {
+					margin-top: -1%;
+				}
+				@media (max-width:570px) {
+					font-size: 27px;
+					padding-left: 31%;
+					margin-top: 2%;
 				}
 
 			}
@@ -1994,6 +2017,12 @@ $progress-bar-transition-time: 0.5s;
 				@media (max-width:992px) {
 					display: block;
 					padding-left: 22%;
+       				margin-top: 2%;
+				}
+				@media (max-width:570px) {
+					font-size: 27px;
+					padding-left: 31%;
+					margin-top: 4%;
 				}
 				
 			}
@@ -2006,7 +2035,13 @@ $progress-bar-transition-time: 0.5s;
 				@media (max-width:992px) {
 					max-width: 480px;
 					margin-left: 1%;
-					margin-top: 7%;
+					margin-top: 12%;
+				}
+				@media (max-width:570px) {
+				font-size: 14px;
+				margin-top: 16%;
+				margin-left: 0%;
+				width: 390px;
 				}
 			}
 		}
@@ -2023,6 +2058,11 @@ $progress-bar-transition-time: 0.5s;
         		position: relative;
 				justify-content: unset;
 			}
+			@media (max-width:570px) {
+				left: 0;
+				justify-content: end;
+				text-align-last: right;
+			}
 
 			&-text {
 				font-weight: 600;
@@ -2034,6 +2074,13 @@ $progress-bar-transition-time: 0.5s;
 					margin-top: 3%;
 					max-width: 338px;
         			text-align: justify;
+				}
+				@media (max-width:570px) {
+				font-size: 14px;
+				margin-left: 0%;
+				width: 390px;
+				margin-top: 5%;
+
 				}
 			}
 		}
@@ -2049,6 +2096,11 @@ $progress-bar-transition-time: 0.5s;
 		@media (max-width:992px) {
 			text-align: end;
        		max-width: 992px;
+		}
+		@media (max-width:570px) {
+			text-align: start;
+       	 	max-width: 390px;
+			font-size: 13px;
 		}
 	}
 

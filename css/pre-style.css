@@ -2484,7 +2484,20 @@ tbody {
   .about-us-background-firstline {
     left: -28%;
     width: 750px;
-    margin-top: 1%;
+    margin-top: -8%;
+  }
+}
+@media (max-width: 767px) {
+  .about-us-background-firstline {
+    margin-top: -10%;
+    width: 550px;
+  }
+}
+@media (max-width: 570px) {
+  .about-us-background-firstline {
+    margin-top: -16%;
+    left: -45%;
+    width: 390px;
   }
 }
 .about-us-main {
@@ -2550,6 +2563,11 @@ tbody {
     top: 140px;
   }
 }
+@media (max-width: 570px) {
+  .about-us-main-left-logo {
+    min-width: 30%;
+  }
+}
 .about-us-main-left-title {
   font-weight: 700;
   font-size: 40px;
@@ -2566,6 +2584,19 @@ tbody {
   .about-us-main-left-title {
     display: block;
     padding-left: 22%;
+    margin-top: 1%;
+  }
+}
+@media (max-width: 767px) {
+  .about-us-main-left-title {
+    margin-top: -1%;
+  }
+}
+@media (max-width: 570px) {
+  .about-us-main-left-title {
+    font-size: 27px;
+    padding-left: 31%;
+    margin-top: 2%;
   }
 }
 .about-us-main-left-suptitle {
@@ -2581,6 +2612,14 @@ tbody {
   .about-us-main-left-suptitle {
     display: block;
     padding-left: 22%;
+    margin-top: 2%;
+  }
+}
+@media (max-width: 570px) {
+  .about-us-main-left-suptitle {
+    font-size: 27px;
+    padding-left: 31%;
+    margin-top: 4%;
   }
 }
 .about-us-main-left-text {
@@ -2593,7 +2632,15 @@ tbody {
   .about-us-main-left-text {
     max-width: 480px;
     margin-left: 1%;
-    margin-top: 7%;
+    margin-top: 12%;
+  }
+}
+@media (max-width: 570px) {
+  .about-us-main-left-text {
+    font-size: 14px;
+    margin-top: 16%;
+    margin-left: 0%;
+    width: 390px;
   }
 }
 .about-us-main-right {
@@ -2620,6 +2667,16 @@ tbody {
             justify-content: unset;
   }
 }
+@media (max-width: 570px) {
+  .about-us-main-right {
+    left: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -moz-text-align-last: right;
+         text-align-last: right;
+  }
+}
 .about-us-main-right-text {
   font-weight: 600;
   font-size: 17px;
@@ -2634,6 +2691,14 @@ tbody {
     text-align: justify;
   }
 }
+@media (max-width: 570px) {
+  .about-us-main-right-text {
+    font-size: 14px;
+    margin-left: 0%;
+    width: 390px;
+    margin-top: 5%;
+  }
+}
 .about-us-about {
   font-weight: 600;
   margin-top: 30px;
@@ -2642,6 +2707,13 @@ tbody {
   .about-us-support {
     text-align: end;
     max-width: 992px;
+  }
+}
+@media (max-width: 570px) {
+  .about-us-support {
+    text-align: start;
+    max-width: 390px;
+    font-size: 13px;
   }
 }
 
