@@ -39,9 +39,45 @@
 					</div>	
 				</div>
 			</header>
-			<section class="support">
-				<div class="_container-support">
-					<img src="img/PNF.jpg" alt="page_not-found" class="NTF">		
+			<section class="history">
+				<div class="_container-history">
+					<h1 class="eventlog-title">ИСТОРИЯ</h1>
+						<fieldset class="history-filter">
+							<legend class="diagnostics-legend"><a href="#" class="filter-link">Фильтр <img class="diagnostics-legend-arrows" src="img/icons24.png" alt=""><img class="diagnostics-legend-arrowsDown" src="img/iconsdown24.png" alt=""></a></legend>
+							<div class="history-block">
+								<div class="filter-blocks">
+									<div class="date-start-block">
+										<label for="dstart">Дата</label>
+										<input class="dstart-input" id="hdstart" name="dstart" type="date" placeholder="">
+									</div>
+									<div class="date-end-block">
+										<label for="dend">Время</label>
+										<input class="dend-input" id="hdend" name="dend" type="date" placeholder="">
+									</div>
+								</div>
+								<div class="history-btn-flex">
+									<div class="button v8 eventlog-button-submit">
+										<span class="label-set-btn"><button type="submit" class="set-sub-btn" id="his-start-btn">Вперед</button></span>
+										<span class="icon">
+											<span></span>
+										</span>
+									</div>
+									<div class="button v8 eventlog-button-submit">
+										<span class="label-set-btn"><button type="submit" class="set-sub-btn" id="his-end-btn">Назад</button></span>
+										<span class="icon">
+											<span></span>
+										</span>
+									</div>
+								</div>	
+								<div class="button v8 eventlog-button-submit">
+									<span class="label-set-btn"><button type="submit" class="set-sub-btn" id="his-sub-btn">Просмотр</button></span>
+									<span class="icon">
+										<span></span>
+									</span>
+								</div>
+							</div>
+						</fieldset>
+
 				</div>
 			</section>
 			<!--Верстаем футер-->
@@ -61,5 +97,6 @@
 		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
 		<script src="js/default.js"></script>
+		<script src="js/history.js"></script>
 	</body>
 </html>	

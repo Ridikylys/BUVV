@@ -8,7 +8,6 @@ $('.diagnostics-legend').click(function(event) {
 	$('.diagnostics-legend-arrowsDown').toggleClass('diagnostics-legend-arrowsDown-visible');
 	$('.diagnostics-block').toggleClass('displaynone2');
 	$('.diagnostics-filter').toggleClass('displaynone');
-	
 });
 
 

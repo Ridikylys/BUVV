@@ -44,23 +44,25 @@
 					<div class="eventlog-container">
 						<h1 class="eventlog-title">ЖУРНАЛ СОБЫТИЙ</h1>
 							<fieldset class="eventlog-filter">
-								<legend>Фильтр</legend>
-								<div class="filter-blocks">
-									<div class="date-start-block">
-										<label for="dstart">Начальная дата</label>
-										<input class="dstart-input" id="dstart" name="dstart" type="date" placeholder="">
-									</div>
-									<div class="date-end-block">
-										<label for="dend">Конечная дата</label>
-										<input class="dend-input" id="dend" name="dend" type="date" placeholder="">
-									</div>
-								</div>	
-								<div class="button v8 eventlog-button-submit">
-									<span class="label-set-btn"><button type="submit" class="set-sub-btn">Сохранить</button></span>
-									<span class="icon">
-										<span></span>
-									</span>
-								</div>							
+								<legend class="diagnostics-legend"><a href="#" class="filter-link">Фильтр <img class="diagnostics-legend-arrows" src="img/icons24.png" alt=""><img class="diagnostics-legend-arrowsDown" src="img/iconsdown24.png" alt=""></a></legend>
+								<div class="filter-block-teh">	
+									<div class="filter-blocks">
+										<div class="date-start-block">
+											<label for="dstart">Начальная дата</label>
+											<input class="dstart-input" id="dstart" name="dstart" type="date" placeholder="">
+										</div>
+										<div class="date-end-block">
+											<label for="dend">Конечная дата</label>
+											<input class="dend-input" id="dend" name="dend" type="date" placeholder="">
+										</div>
+									</div>	
+									<div class="button v8 eventlog-button-submit">
+										<span class="label-set-btn"><button type="submit" class="set-sub-btn">Просмотр</button></span>
+										<span class="icon">
+											<span></span>
+										</span>
+									</div>	
+								</div>
 							</fieldset>
 					</div>
 					<div class="eventlog-table">
@@ -108,6 +110,7 @@
 		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
 		<script src="js/default.js"></script>
+		<script src="js/eventlog.js"></script>
 		<script >
 			function AppendLogTable(dtevent,mes){
 				let listtable = document.getElementsByClassName("eventlog-table");
