@@ -263,7 +263,7 @@ body {
 		justify-content: space-between;
 		padding: 20px 0px 23px 0px;
 		@media (max-width: 730px){
-			padding: 10px 0px 10px 0px;
+			padding: 0px 0px 15px 0px;
 			flex-direction: column;
 		}
 	}
@@ -273,21 +273,33 @@ body {
     	flex-direction: column;
     	justify-content: space-between;
 		@media (max-width: 730px) {
-		display: flex;
-    	flex-direction: column;
-    	justify-self: center;
-    	justify-content: center;
-    	align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-self: center;
+			justify-content: center;
+			align-items: center;
 		}
 		
+	}
+
+	&__row-diag {
+		padding-top: 10px;
 	}
 
 	&__row-status, &__row-diag {
 		display: flex;
 		justify-content: space-between;
-		@media (max-width: 730px){
+		@media (max-width: 730px) {
 			justify-content: center;
+			height: 37px;
+			align-items: center;
+			padding-top: 0px;
+			margin:10px 0 0px 0;
 		}
+		@media (max-width: 730px) {
+			height: 25px;
+		}
+
 		&_sost, &-text {
 			display: flex;
 			flex-direction: row;
@@ -322,9 +334,7 @@ body {
 
 	}
 
-	&__row-diag {
-		padding-top: 10px;
-	}
+	
 	
 	&__row-time {
 		display: flex;
@@ -334,8 +344,9 @@ body {
 	&__column-time {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		min-height: 67px;
+		height: 100%;
 		@media (max-width: 730px) {
 			align-items: center;
 			}
@@ -348,13 +359,19 @@ body {
 			@media (max-width: 730px){
 				justify-content: space-between;
 				width: 250px;
-				padding-top: 10px;
+				padding-top: 0px;
+				height: 37px;
+				align-items: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
 			}
 			@media (max-width: 420px) {
 				width: 200px;
+				height: 25px;
 			}
 			
 			&-TextData, &-TextTime {
+
 				color: rgb(0, 0, 0);
 				letter-spacing: 0px;
 				text-align: left;
@@ -950,6 +967,11 @@ body {
 		}
 	}
 
+	&-main {
+		margin-bottom: 0px;
+		padding-bottom: 20px;
+	}
+
 }
 
 /*******************************************************************************
@@ -1327,7 +1349,7 @@ input[type="number"] {
 }
 
 ._container-support{
-	max-width: 1170px;
+	max-width: 1152px;
 	margin: 0 auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
@@ -1420,6 +1442,14 @@ input[type="number"] {
 	}
 
 	&-filter {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		border: 2px solid #007397;
+   	 	border-radius: 5px;
+		margin-bottom: 20px;
+		width: 750px;
 		height: 230px;
 		@media (max-width: 800px) {
 			width: 500px;
@@ -1679,15 +1709,24 @@ $progress-bar-transition-time: 0.5s;
 	width: 750px;
     align-items: normal;
 	margin-bottom: 5%;
+	padding-right: 10px;
+
+	@media (max-width:992px) {
+		max-width: 730px;
+		padding-left: 10px;
+	}
 
 	@media (max-width:767px) {
-		width: 550px;
+		width: 540px;
 	}
 
 	@media (max-width:570px) {
-		width: 250px;
+		width: 290px;
 		margin: 0 auto;
-		padding-bottom: 15px;
+		padding-bottom: 20px;
+	}
+	@media (max-width: 420px) {
+		max-width: 270px;
 	}
 	
 
@@ -1705,8 +1744,12 @@ $progress-bar-transition-time: 0.5s;
 			@media (max-width:767px) {
 				margin: 0;
 			}
+			@media (max-width:570px) {
+				padding-top: 10px;
+				padding-bottom: 20px;
+			}
 			@media (max-width: 450px) {
-				padding-top: 0px;
+				padding-top: 10px;
 				padding-bottom: 20px;
 			}
 			@media (max-width: 420px) {
@@ -1735,11 +1778,14 @@ $progress-bar-transition-time: 0.5s;
 	}
 }
 .BP-fl-text {
+	letter-spacing: 1px;
+	line-height: 20px;
+
 	@media (max-width:767px) {
-		width: 210px;
+		width: 230px;
 	}
 	@media (max-width:570px) {
-		width: 210px;
+		width: 300px;
         align-items: center;
         text-align: center;
         margin: 0 auto;
@@ -1748,6 +1794,7 @@ $progress-bar-transition-time: 0.5s;
 	}
 	@media (max-width: 420px) {
 		font-size: 10px;
+		width: 200px;
 	}
 }
 
@@ -1764,17 +1811,23 @@ $progress-bar-transition-time: 0.5s;
 	
 }
 .BU-fl-text {
+	letter-spacing: 0.5px;
+	line-height: 20px;
+
 	@media (max-width:767px) {
-		width: 210px;
+		width: 230px;
 	}
 	@media (max-width:570px) {
 		text-align: center;
         margin: 0 auto;
         padding-bottom: 5px;
 		line-height: 20px;
+		width: 230px;
 	}
 	@media (max-width: 420px) {
 		font-size: 10px;
+		width: 200px;
+		letter-spacing: 1px;
 	}
 }
 
@@ -1795,7 +1848,16 @@ $progress-bar-transition-time: 0.5s;
 		position: relative;
 		display: block;
 		background: #007397;
-		top: -13px;
+		top: -15px;
+		@media (max-width:767px) {
+			top: -12px;	
+		}
+		@media (max-width:570px) {
+			top: -10px;	
+		}
+		@media (max-width:360px) {
+			top: -8px;	
+		}
 	}
 
 	&__dev {
@@ -1823,13 +1885,21 @@ $progress-bar-transition-time: 0.5s;
 				max-width: none;
 				text-align-last: left;
 				text-indent: 5%;
-				margin-bottom: 20px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				max-width: 730px;
+				margin: 0 auto;
+			}
+			@media (max-width:767px) {
+				max-width: 540px;
 			}
 			@media (max-width:570px) {
 				line-height: 150%;
 			}
 			@media (max-width: 420px) {
 				font-size: 10px;
+				max-width: 270px;
+				padding: 10px 0 10px 0;
 			}
 		}
 
@@ -1859,6 +1929,7 @@ $progress-bar-transition-time: 0.5s;
 			}
 			@media (max-width: 420px) {
 				font-size: 12px;
+				margin-bottom: 0;
 			}
 		}
 
@@ -2074,6 +2145,11 @@ $progress-bar-transition-time: 0.5s;
 		&-right {
 
 			flex: 1 1 30%;
+			@media (min-width:1183px) {
+				width: 400px;
+				position: relative;
+				left: -15px;
+			}
 			@media (max-width:1182px) {
 				display: flex;
     			justify-content: end;
@@ -2095,6 +2171,9 @@ $progress-bar-transition-time: 0.5s;
 				line-height: 150%;
 				color: #14243a;
 				margin-top: 300px;
+				@media (min-width:1183px) {
+					width: 390px;
+				}
 				@media (max-width:1182px) {
 					margin-top: 3%;
 					max-width: 338px;
@@ -2306,5 +2385,41 @@ Tehnical blocks for hidden
 .displaynone3 {
 	img {
 		display: none;
+	}
+}
+
+.displaynone4 {
+	height: 35px;
+	//width: 140px;
+	border: none;
+	//position: relative;
+	right: -37%;
+	border: 2px solid #007397;
+	@media (max-width: 767px) {
+		width: 500px;
+	}
+	@media (max-width: 550px) {
+		width: 380px;
+	}
+	@media (max-width: 430px) {
+		width: 290px; 
+	}
+	@media (max-width: 340px) {
+		width: 290px; 
+	}
+}
+
+//Убираем косяки мозилы
+
+@-moz-document url-prefix() {
+	@media (max-width: 360px) {
+		.diagnostics-block {
+			margin-top: -50px;
+		}
+	}
+	@media (max-width: 430px) {
+		.diagnostics-block {
+			margin-top: -40px;
+		}
 	}
 }
