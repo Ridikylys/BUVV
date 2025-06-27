@@ -163,9 +163,6 @@ body {
 
 .menu {
 
-	&__icon {
-	}
-
 	&__body {
 		@media (max-width: 767px) {
 			position: fixed;
@@ -722,33 +719,16 @@ body {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-
-			}
-			&-data {
-			}
 		}
 		&-b {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-
-			}
-			&-data {
-
-			}
 		}
 		&-c {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-
-			}
-			&-data {
-
-			}
 		}
 	}
 
@@ -777,30 +757,17 @@ body {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-			}
-			&-data {
-			}
 		}
 		&-switchOFF {
 
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-
-			&-text {
-			}
-			&-data {
-			}
 		}
 		&-block {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-			}
-			&-data {
-			}
 		}
 	}
 
@@ -833,28 +800,16 @@ body {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-			}
-			&-data {
-			}
 		}
 		&-kl {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-			}
-			&-data {
-			}
 		}
 		&-temp {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			&-text {
-			}
-			&-data {
-			}
 		}
 	}
 } 
@@ -1395,10 +1350,6 @@ input[type="number"] {
 		font-size: 12px;
 	}
 
-	&-container {
-
-	}
-
 	&-title {
 		text-align: center;
 		font-size: 16px;
@@ -1570,9 +1521,7 @@ input[type="number"] {
 .filter-link {
 	color: #000;
 }
-.first-value {
-	
-}
+
 .btn {
 	margin: 0px;
 }
@@ -1759,10 +1708,6 @@ $progress-bar-transition-time: 0.5s;
 	}
 }
 
-.support-block-fl {
-
-	
-}
 .support-block-fl-BP {
 	padding-bottom: 35px;
 	@media (max-width:767px) {
@@ -1798,8 +1743,6 @@ $progress-bar-transition-time: 0.5s;
 	}
 }
 
-.support-block-fl-BU {
-}
 .BU-fl {
 	display: flex;
 	justify-content: space-between;
