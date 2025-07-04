@@ -42,34 +42,14 @@
 			<section class="settings">
 				<div class="_container">
 					<h1>DEBUGнём!</h1>
-					<form >
+					<form action="localhost" method="POST">
 						<fieldset class="settings-fieldset">
 							<legend>Загрузка файла</legend>
 							<div class="settings-blocks debug-form">
-								<form method="POST" action="/upload" enctype="multipart/form-data" target="iframe">
-									<input class="debug" type="file" name="upload" />
-									<div class="debug-road">
-										<input class="debug-road-text" type="text" id="road" placeholder="Путь файла">
-										<div class="button v8 button-submit debug-button">
-											<span class="label-set-btn">
-												
-												<button type="submit" class="set-sub-btn" value="f">Применить</button>
-												<!--<input type="submit" value="Отправить" class="set-sub-btn" />-->
-											</span>
-											<span class="icon">
-												<span></span>
-											</span>
-										</div>	
-									</div>
-										<div class="container">
-											<div class="progress" max="100" value="20"></div>
-										</div>
-										<div class="button v8 button-submit debug-button">
-											<span class="label-set-btn">
-												
-												<button type="submit" class="set-sub-btn" value="f">Отправить</button>
-												<!--<input type="submit" value="Отправить" class="set-sub-btn" />-->
-											</span>
+								<form enctype="multipart/form-data" method="post">
+									<input class="debug" type="file" name="f">
+										<div class="button v8 button-submit">
+											<span class="label-set-btn"><button type="submit" class="set-sub-btn">Отправить</button></span>
 											<span class="icon">
 												<span></span>
 											</span>

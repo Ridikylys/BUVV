@@ -3166,6 +3166,7 @@ Tehnical blocks for hidden
 .debug {
   width: 300px;
   height: 50px;
+  margin: 20px 0;
 }
 .debug-form {
   display: -webkit-box;
@@ -3181,4 +3182,28 @@ Tehnical blocks for hidden
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.debug-button {
+  margin-top: 20px;
+}
+.debug-road {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 300px;
+}
+.debug-road-text {
+  width: 160px;
+  height: 40px;
+  margin: 20px 0;
 }
