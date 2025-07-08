@@ -39,73 +39,49 @@
 					</div>	
 				</div>
 			</header>
-			<div class="_container">
+			<section class="settings">
+				<div class="_container">
 					<h1>DEBUGнём!</h1>
-			</div>
-			<section class="rootDirectory">
-				<div class="_container">
-					<div class="rootDirectory-main">
-						<div class="rootDirectory-title">
-							Root Directory
-						</div>
-						<div class="rootDirectory-table">
-						<table class="table_blur">
-							<tr>
-							  <th class="first-column title-column">Directory</th>
-							  <th class="second-column title-column">Data</th>
-							  <th class="third-column title-column">Event</th>
-							</tr>
-							<tr>
-							  <td class="first-column">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
-							  <td class="second-column">12:00</td>
-							  <td class="third-column"> </td>
-							</tr>
-							<tr>
-							  <td class="first-column"></td>
-							  <td class="second-column"></td>
-							  <td class="third-column"></td>
-							</tr>
-							<tr>
-								<td class="first-column"></td>
-								<td class="second-column"></td>
-								<td class="third-column"></td>
-							  </tr>
-
-						</table>
-						</div>	
-					</div>
-				</div>
-			</section>
-			<section class="settings settings-debug">
-				<div class="_container">
+					<form >
 						<fieldset class="settings-fieldset">
 							<legend>Загрузка файла</legend>
 							<div class="settings-blocks debug-form">
-								<form id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data" target="iframe" class="debug-form-main">
-									<input class="debug" type="file" name="upload" id="uploadForm_File">
+								<form method="POST" action="/upload" enctype="multipart/form-data" target="iframe">
+									<input class="debug" type="file" name="upload" />
 									<div class="debug-road">
-										<input class="debug-road-text" type="text" id="road" placeholder="Путь файла">	
-									</div>
-										<div class="container">
-											<progress  id="progressBar" value="0" max="100"></progress>
-										</div>
-										<div class="form-upload">
-											<span class=form-upload__status id="uploadForm_Status"></span>
-											<span class=form-upload__status id="uploadForm_Size"></span>
-										</div>
+										<input class="debug-road-text" type="text" id="road" placeholder="Путь файла">
 										<div class="button v8 button-submit debug-button">
 											<span class="label-set-btn">
 												
-												<button type="submit" class="set-sub-btn" value="f" id="uploadForm_Submit">Отправить</button>
+												<button type="submit" class="set-sub-btn" value="f">Применить</button>
 												<!--<input type="submit" value="Отправить" class="set-sub-btn" />-->
 											</span>
 											<span class="icon">
 												<span></span>
 											</span>
 										</div>	
+									</div>
+										<div class="container">
+											<div class="progress" max="100" value="20"></div>
+										</div>
+										<div class="button v8 button-submit debug-button">
+											<span class="label-set-btn">
+												
+												<button type="submit" class="set-sub-btn" value="f">Отправить</button>
+												<!--<input type="submit" value="Отправить" class="set-sub-btn" />-->
+											</span>
+											<span class="icon">
+												<span></span>
+											</span>
+										</div>	
+									
+								</form> 
 							</div>	
+						
 						</fieldset>
+						
 					</form>				
+
 				</div>
 			</section>
 			<!--Верстаем футер-->
@@ -125,7 +101,6 @@
 		<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<!--Пробую вставить график. ПОТОМ НАДО ЗАМЕНИТЬ НА БИБЛИОТЕКИ ИЗ ЗАГРУЗКИ ЕСП-->
 		<script src="js/default.js"></script>
-		<script src="js/upload.js"></script>
 		
 	</body>
 </html>	

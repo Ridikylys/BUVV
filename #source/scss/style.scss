@@ -2367,33 +2367,90 @@ Tehnical blocks for hidden
 	}
 }
 
+//СТРАНИЦА ДЕБАГА
+
+.rootDirectory {
+
+	&-main {
+
+	}
+
+	&-title {
+		align-items: center;
+		text-align: left;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding: 10px 0px;
+	}
+
+	&-table {
+
+	}
+}
+.first-column {
+	width: 20%;
+}
+
+.second-column, .third-column {
+	width: 3%;
+}
+
 .debug {
 	width: 300px;
 	height: 50px;
-	margin: 20px 0;
+	margin: 0;
+	
 
 	&-form {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		&-main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 260px;
+			justify-content: space-evenly;
+		}
 	}
 
 	&-button {
-		margin-top: 20px;
+		
 	}
 
 	&-road {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		max-width: 300px;
 
 		&-text {
 			width: 160px;
    			height: 40px;
-			margin: 20px 0;
+			margin: 0;
 		}
 	}
+}
+
+
+
+.form-upload__status:empty::before {
+  content: "Не загружено";
+}
+
+.form-upload__status:empty + span {
+  display: none;
+}
+
+.form-upload {
+	display: flex;
+	justify-content: center;
+	
+}
+
+.settings-debug {
+	padding-top: 20px;
 }

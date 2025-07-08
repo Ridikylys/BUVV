@@ -3163,10 +3163,27 @@ Tehnical blocks for hidden
     }
   }
 }
+.rootDirectory-title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+.first-column {
+  width: 20%;
+}
+
+.second-column, .third-column {
+  width: 3%;
+}
+
 .debug {
   width: 300px;
   height: 50px;
-  margin: 20px 0;
+  margin: 0;
 }
 .debug-form {
   display: -webkit-box;
@@ -3183,8 +3200,21 @@ Tehnical blocks for hidden
       -ms-flex-pack: center;
           justify-content: center;
 }
-.debug-button {
-  margin-top: 20px;
+.debug-form-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 260px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .debug-road {
   display: -webkit-box;
@@ -3194,9 +3224,9 @@ Tehnical blocks for hidden
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3205,5 +3235,26 @@ Tehnical blocks for hidden
 .debug-road-text {
   width: 160px;
   height: 40px;
-  margin: 20px 0;
+  margin: 0;
+}
+
+.form-upload__status:empty::before {
+  content: "Не загружено";
+}
+
+.form-upload__status:empty + span {
+  display: none;
+}
+
+.form-upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.settings-debug {
+  padding-top: 20px;
 }
